@@ -1,0 +1,33 @@
+extends layout.pug
+
+block content 
+  nav.grid-container.portfolio-breadcrumb
+    a(href='/') ← Back
+  article.grid-container.portfolio-intro.portfolio-project
+    .grid-x
+      .cell.small-6.medium-9.large-9
+
+        
+        h1 #{title}
+
+        
+        p.lead.text-light
+          | #{desc}
+
+      .cell.portfolio-meta.small-6.medium-2.large-3
+        h6 Technologies
+
+        
+        ul
+          each skill in skills
+            li= skill
+
+
+        
+        a.button.expanded(href=`${link}`, target="_blank") Live Demo
+        a.button.expanded(href=`${github}`, target="_blank") GitHub Repo
+    
+    
+    img.image(src=`${imgs[0]}`)
+    img.image(src=`${imgs[1]}`)
+    img.image(src=`${imgs[2]}`)

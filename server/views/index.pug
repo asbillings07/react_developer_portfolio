@@ -1,0 +1,22 @@
+extends layout.pug
+
+block content 
+  article.grid-container.portfolio-intro
+    div
+
+      
+      h1 Let's Make the Web Great Together!
+
+      p.lead.text-light
+        | This portfolio is designed to show my skills a Developer. My skills include but not limited to: JavaScript, Node.js, React, SQL, Postgres, ORMs, communication Skills.
+  article.grid-container.portfolio-index
+    
+      ul
+        each n in projects
+          li.cell
+            a(href=`/project/${n.id}`)
+              img.thumbnail(src=`${n.image_urls[0]}`)
+              h5 #{n.project_name}
+      
+     
+      

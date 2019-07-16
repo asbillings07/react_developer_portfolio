@@ -1,0 +1,144 @@
+{
+  "data": {
+    "projects": [
+      {
+        "id": 0,
+        "project_name": "Random Quote Generator",
+        "description": "A program that displays a randomly selected quote each time the user clicks a button",
+        "technologies": ["HTML", "CSS", "JavaScript"],
+        "live_link": "https://random-quotes-generator.netlify.com/",
+        "github_link": "https://github.com/asbillings07/random-quote-generator",
+        "image_urls": [
+          "/static/images/random-generator01.jpg",
+          "/static/images/random-generator02.jpg",
+          "/static/images/random-generator03.jpg"
+        ]
+      },
+      {
+        "id": 1,
+        "project_name": "List Pagination and Filtering",
+        "description": "This app displays 10 students on one page and provides navigation to jump to a list of more items.",
+        "technologies": ["HTML", "CSS", "JavaScript"],
+        "live_link": "https://list-pagination-app.netlify.com/",
+        "github_link": "https://github.com/asbillings07/list_pagination_and_filtering-v1",
+        "image_urls": [
+          "/static/images/pagination01.jpg",
+          "/static/images/pagination02.jpg",
+          "/static/images/pagination03.jpg"
+        ]
+      },
+      {
+        "id": 2,
+        "project_name": "Interactive Form",
+        "description": "This is a form enhanced with JavaScript so that it’s engaging, interactive, and easy to use",
+        "technologies": ["HTML", "CSS", "JavaScript", "JQuery"],
+        "live_link": "https://interactive-form.netlify.com/",
+        "github_link": "https://github.com/asbillings07/js-interactive-form",
+        "image_urls": [
+          "/static/images/interactive-form01.jpg",
+          "/static/images/interactive-form02.jpg",
+          "/static/images/interactive-form03.jpg"
+        ]
+      },
+      {
+        "id": 3,
+        "project_name": "Phrase Game",
+        "description": "This is a browser-based, word guessing game: 'Jedi Hunter.' A player tries to guess the phrase by selecting individual letters from an onscreen keyboard before they run out of attempts.",
+        "technologies": ["HTML", "CSS", "JavaScript", "JQuery", "OOP"],
+        "live_link": "https://jedi-hunter-game.netlify.com/",
+        "github_link": "https://github.com/asbillings07/oop_game-v2",
+        "image_urls": [
+          "/static/images/phrase-game01.jpg",
+          "/static/images/phrase-game02.jpg",
+          "/static/images/phrase-game03.jpg"
+        ]
+      },
+      {
+        "id": 4,
+        "project_name": "Public Api Requests",
+        "description": "This project creates an employee directory by communicating with a third-party API.",
+        "technologies": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "JQuery",
+          "AJAX",
+          "Fetch API"
+        ],
+        "live_link": "https://public-api-request.netlify.com/",
+        "github_link": "https://github.com/asbillings07/public_api_requests",
+        "image_urls": [
+          "/static/images/api-app01.jpg",
+          "/static/images/api-app02.jpg",
+          "/static/images/api-app03.jpg"
+        ]
+      },
+      {
+        "id": 5,
+        "project_name": "React Gallery App",
+        "description": "This project creates a flickr type clone with the flickr API.",
+        "technologies": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "React",
+          "Axios",
+          "Fetch API"
+        ],
+        "live_link": "https://gallerize.netlify.com/",
+        "github_link": "https://github.com/asbillings07/react_gallery_app",
+        "image_urls": []
+      },
+      {
+        "id": 6,
+        "project_name": "SQL Library Manager",
+        "description": "This project is a library manager where you can create, view, update and delete books.",
+        "technologies": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "SQL",
+          "Node",
+          "Sequelize ORM",
+          "Pug",
+          "Express"
+        ],
+        "live_link": "https://sql-library-app.herokuapp.com/books",
+        "github_link": "https://github.com/asbillings07/sql_library_manager",
+        "image_urls": []
+      },
+      {
+        "id": 7,
+        "project_name": "React Scoreboard",
+        "description": "This project is a scoreboard for tracking points in a game of your choice, it also includes a timer",
+        "technologies": ["HTML", "CSS", "JavaScript", "React"],
+        "live_link": "https://readysetscore.netlify.com/",
+        "github_link": "https://github.com/asbillings07/react-scoreboard-app",
+        "image_urls": []
+      },
+      {
+        "id": 8,
+        "project_name": "CourseShare",
+        "description": "This project is a Full Stack App with React and REST API that allows users to view, create, update and delete courses.",
+        "technologies": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "SQL",
+          "Node",
+          "Sequelize ORM",
+          "REST API",
+          "Express",
+          "React",
+          "bcrypt",
+          "basic-auth",
+          "Fetch API",
+          "Axios"
+        ],
+        "live_link": "https://courseshare.netlify.com",
+        "github_link": "https://github.com/asbillings07/full-stack-react-with-restapi",
+        "image_urls": []
+      }
+    ]
+  }
+}
