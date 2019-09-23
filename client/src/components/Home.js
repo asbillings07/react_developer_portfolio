@@ -7,14 +7,14 @@ export function Home() {
   const showProjects = () => {
     return data.projects.map(project => (
       <Col lg={4} key={project.id}>
-        <Card style={{ width: '20rem' }}>
+        <ProjectCard>
           <Card.Img variant="top" src={project.image_urls[0]} />
           <Card.Body>
             <Card.Title>{project.name}</Card.Title>
             <Card.Text>{project.description}</Card.Text>
             <Button variant="primary">Go Here</Button>
           </Card.Body>
-        </Card>
+        </ProjectCard>
       </Col>
     ));
   };
@@ -44,4 +44,7 @@ const CardContainer = styled.div`
 const TextContainer = styled.div`
   display: flex;
   justify-content: center;
+`;
+const ProjectCard = styled(Card)`
+  width: 25rem;
 `;
