@@ -1,18 +1,21 @@
 import React from 'react';
 import { data } from '../data';
-import { Card, Button } from 'react-bootstrap';
+import { Col, Row, Card, Button } from 'react-bootstrap';
+import styled from 'styled-components';
 
 export function Home() {
   const showProjects = () => {
     return data.projects.map(project => (
-      <Card style={{ width: '18rem' }} key={project.id}>
-        <Card.Img variant="top" src={project.image_urls[0]} />
-        <Card.Body>
-          <Card.Title>{project.name}</Card.Title>
-          <Card.Text>{project.description}</Card.Text>
-          <Button variant="primary">Go Here</Button>
-        </Card.Body>
-      </Card>
+      <Col lg={4} key={project.id}>
+        <Card style={{ width: '20rem' }}>
+          <Card.Img variant="top" src={project.image_urls[0]} />
+          <Card.Body>
+            <Card.Title>{project.name}</Card.Title>
+            <Card.Text>{project.description}</Card.Text>
+            <Button variant="primary">Go Here</Button>
+          </Card.Body>
+        </Card>
+      </Col>
     ));
   };
 
@@ -26,7 +29,19 @@ export function Home() {
         around, play with some of my projects. If you want to get to know me
         better, you can checkout the about me section.{' '}
       </p>
-      {showProjects()}
+
+      <CardContainer>
+        <Row>{showProjects()}</Row>
+      </CardContainer>
     </>
   );
 }
+
+const CardContainer = styled.div`
+  display: flex;
+  justify-content: space-around;
+`;
+const TextContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`;
