@@ -6,7 +6,7 @@ import styled from 'styled-components';
 export function Home() {
   const showProjects = () => {
     return data.projects.map(project => (
-      <Col lg={4} key={project.id}>
+      <StyledCol lg={4} key={project.id}>
         <ProjectCard>
           <Card.Img variant="top" src={project.image_urls[0]} />
           <Card.Body>
@@ -15,7 +15,7 @@ export function Home() {
             <Button variant="primary">Go Here</Button>
           </Card.Body>
         </ProjectCard>
-      </Col>
+      </StyledCol>
     ));
   };
 
@@ -41,9 +41,8 @@ const CardContainer = styled.div`
   display: flex;
   justify-content: space-around;
 `;
-const TextContainer = styled.div`
-  display: flex;
-  justify-content: center;
+const StyledCol = styled(Col)`
+  padding: 0em 7em;
 `;
 const ProjectCard = styled(Card)`
   width: 25rem;
