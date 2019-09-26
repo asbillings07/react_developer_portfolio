@@ -5,7 +5,6 @@ import profilePic from '../images/profilePic.jpeg';
 import Twitter from '../svgs/twitter.svg';
 import Github from '../svgs/github-logo.svg';
 import LinkedIn from '../svgs/linkedin.svg';
-import Logo from '../logo.svg';
 
 export function About() {
   return (
@@ -15,9 +14,22 @@ export function About() {
           <StyledCard style={{ width: '18rem' }}>
             <Card.Img variant="top" src={profilePic} />
             <Card.Header>
-              <img src={LinkedIn} alt="LinkedIn" />
-              <img src={Github} alt="LinkedIn" />
-              <img src={Twitter} alt="LinkedIn" />
+              <a
+                href="https://www.linkedin.com/in/aaron-billings-9b429610a/"
+                target="_blank"
+              >
+                <SVGImage src={LinkedIn} alt="LinkedIn" />
+              </a>
+              <a
+                href="https://github.com/asbillings07"
+                // eslint-disable-next-line react/jsx-no-target-blank
+                target="_blank"
+              >
+                <SVGImage src={Github} alt="LinkedIn" />
+              </a>
+              <a href="https://twitter.com/abdevelops" target="_blank">
+                <SVGImage src={Twitter} alt="LinkedIn" />
+              </a>
             </Card.Header>
             <Card.Body></Card.Body>
           </StyledCard>
@@ -33,4 +45,9 @@ export function About() {
 const StyledCard = styled(Card)`
   display: flex;
   width: 18rem;
+`;
+const SVGImage = styled.img`
+  height: 40px;
+  width: 40px;
+  padding: 3px;
 `;
