@@ -36,7 +36,7 @@ const NavDiv = styled.div`
   margin-bottom: 0px;
 `;
 const NavBar = styled(Navbar)`
-  background-color: #f25c05 !important;
+  background-color: #207efc !important;
 `;
 const NavBarTitle = styled(NavBar.Brand)`
   color: white !important;

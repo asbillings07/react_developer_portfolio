@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import React from 'react';
 import { Card, Container, Col, Row } from 'react-bootstrap';
 import styled from 'styled-components';
@@ -20,11 +21,7 @@ export function About() {
               >
                 <SVGImage src={LinkedIn} alt="LinkedIn" />
               </a>
-              <a
-                href="https://github.com/asbillings07"
-                // eslint-disable-next-line react/jsx-no-target-blank
-                target="_blank"
-              >
+              <a href="https://github.com/asbillings07" target="_blank">
                 <SVGImage src={Github} alt="LinkedIn" />
               </a>
               <a href="https://twitter.com/abdevelops" target="_blank">

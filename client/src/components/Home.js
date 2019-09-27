@@ -1,24 +1,10 @@
 import React from 'react';
+import { Projects } from './Projects';
 import { data } from '../data';
-import { Col, Row, Card, Button } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 import styled from 'styled-components';
 
 export function Home() {
-  const showProjects = () => {
-    return data.projects.map(project => (
-      <StyledCol lg={4} key={project.id}>
-        <ProjectCard>
-          <Card.Img variant="top" src={project.image_urls[0]} />
-          <Card.Body>
-            <Card.Title>{project.name}</Card.Title>
-            <Card.Text>{project.description}</Card.Text>
-            <Button variant="primary">Go Here</Button>
-          </Card.Body>
-        </ProjectCard>
-      </StyledCol>
-    ));
-  };
-
   return (
     <>
       <h1>Welcome to my portfolio!</h1>
@@ -31,7 +17,9 @@ export function Home() {
       </p>
 
       <CardContainer>
-        <Row>{showProjects()}</Row>
+        <Row>
+          <Projects data={data} />
+        </Row>
       </CardContainer>
     </>
   );
@@ -40,10 +28,4 @@ export function Home() {
 const CardContainer = styled.div`
   display: flex;
   justify-content: space-around;
-`;
-const StyledCol = styled(Col)`
-  padding: 0em 7em;
-`;
-const ProjectCard = styled(Card)`
-  width: 25rem;
 `;
