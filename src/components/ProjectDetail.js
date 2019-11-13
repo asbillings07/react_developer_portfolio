@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Col, Row } from 'react-bootstrap'
+import { Container, Col, Row, Button } from 'react-bootstrap'
 import { data } from '../data'
 import styled from 'styled-components'
 
@@ -10,7 +10,7 @@ export function ProjectDetail ({ match }) {
   return (
     <Container>
       <Row>
-        <Col md={12}>
+        <Col md={9}>
           <h1>{project.project_name}</h1>
           <h3>{project.description}</h3>
         </Col>
@@ -27,6 +27,12 @@ export function ProjectDetail ({ match }) {
           ))}
         </Col>
         <Col md={3}>
+          <StyledTopButton block href={project.github_link} target='_blank'>
+            GitHub Repo
+          </StyledTopButton>
+          <StyledBottomButton block href={project.live_link} target='_blank'>
+            Live Link
+          </StyledBottomButton>
           <h3>Technologies</h3>
           {project.technologies.map((tech, i) => (
             <p key={i}>{tech}</p>
@@ -37,4 +43,10 @@ export function ProjectDetail ({ match }) {
   )
 }
 
+const StyledBottomButton = styled(Button)`
+  margin-bottom: 30px;
+`
+const StyledTopButton = styled(Button)`
+  margin-top: 30px;
+`
 // set img to width: 100%, height: auto

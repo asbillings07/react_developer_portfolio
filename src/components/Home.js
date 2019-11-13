@@ -1,35 +1,39 @@
 import React from 'react'
-import { Projects } from './Projects'
 import { ScrollView } from './ScrollView'
 import { data } from '../data'
 import { Row, Container, Col } from 'react-bootstrap'
 import styled from 'styled-components'
 
-export function Home () {
+export function Home() {
   return (
     <Container>
       <Row>
         <Col>
-          <ScrollView projects={data.projects} />
           <h1>Welcome to my portfolio!</h1>
+
           <p>
             Here you will see a wide range of projects showcasing my software
-            development skills. All projects include by a github link to the
-            code and a live link where you can play with the app I build. Take a
-            look around, play with some of my projects. If you want to get to
-            know me better, you can checkout the about me section.{' '}
+            development skills. All projects include a github link to the code
+            and a live link where you can play around with the app.
           </p>
-
-          {/* <CardContainer>
-          <Projects data={data} />
-        </CardContainer> */}
+          <p>
+            You can get to any of my projects by clicking on the picture of the
+            project you'd like to see, or by navigating to projects section. To
+            learn more about me click the 'About Me' section. If you like what
+            you see you can reach out to me by using the contact form under the
+            'Contact Me' section.
+          </p>
+          <P>
+            Thanks for browsing through my portfolio! Have Fun and Enjoy your
+            stay!
+          </P>
+          <ScrollView projects={data.projects} />
         </Col>
       </Row>
     </Container>
   )
 }
 
-const CardContainer = styled.div`
-  display: flex;
-  justify-content: space-around;
+const P = styled.p`
+  margin-bottom: 25px;
 `

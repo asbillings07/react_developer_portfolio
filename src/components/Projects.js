@@ -1,11 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Col, Card, Button } from 'react-bootstrap'
+import { Col, Card, Button, Container, Row } from 'react-bootstrap'
+import { data } from '../data'
 
-export function Projects ({ data }) {
+export function Projects() {
   const showProjects = () => {
     return data.projects.map(project => (
-      <StyledCol lg={4} key={project.id}>
+      <StyledCol md={4} key={project.id}>
         <ProjectCard>
           <Card.Img variant='top' src={project.image_urls[0]} />
           <Card.Body>
@@ -20,7 +21,11 @@ export function Projects ({ data }) {
     ))
   }
 
-  return <>{showProjects()}</>
+  return (
+    <Container>
+      <Row>{showProjects()}</Row>
+    </Container>
+  )
 }
 
 const StyledCol = styled(Col)`

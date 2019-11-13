@@ -164,7 +164,7 @@ export const data = {
       id: 9,
       project_name: 'Recommendit!',
       description:
-        'A program that displays a randomly selected quote each time the user clicks a button',
+        'An App that allows you to recommend cool places to your friends',
       technologies: [
         'HTML',
         'CSS',
