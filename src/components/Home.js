@@ -1,11 +1,11 @@
-import React from "react";
-import { Projects } from "./Projects";
-import { ScrollView } from "./ScrollView";
-import { data } from "../data";
-import { Row, Container, Col } from "react-bootstrap";
-import styled from "styled-components";
+import React from 'react'
+import { Projects } from './Projects'
+import { ScrollView } from './ScrollView'
+import { data } from '../data'
+import { Row, Container, Col } from 'react-bootstrap'
+import styled from 'styled-components'
 
-export function Home() {
+export function Home () {
   return (
     <Container>
       <Row>
@@ -17,7 +17,7 @@ export function Home() {
             development skills. All projects include by a github link to the
             code and a live link where you can play with the app I build. Take a
             look around, play with some of my projects. If you want to get to
-            know me better, you can checkout the about me section.{" "}
+            know me better, you can checkout the about me section.{' '}
           </p>
 
           {/* <CardContainer>
@@ -26,10 +26,10 @@ export function Home() {
         </Col>
       </Row>
     </Container>
-  );
+  )
 }
 
 const CardContainer = styled.div`
   display: flex;
   justify-content: space-around;
-`;
+`

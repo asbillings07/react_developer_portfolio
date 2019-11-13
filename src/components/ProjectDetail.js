@@ -1,11 +1,11 @@
-import React from "react";
-import { Container, Col, Row } from "react-bootstrap";
-import { data } from "../data";
-import styled from "styled-components";
+import React from 'react'
+import { Container, Col, Row } from 'react-bootstrap'
+import { data } from '../data'
+import styled from 'styled-components'
 
-export function ProjectDetail({ match }) {
-  const { id } = match.params;
-  const project = data.projects[id];
+export function ProjectDetail ({ match }) {
+  const { id } = match.params
+  const project = data.projects[id]
 
   return (
     <Container>
@@ -22,7 +22,7 @@ export function ProjectDetail({ match }) {
               src={imageSrc}
               alt={`${project.project_name}`}
               key={i}
-              style={{ width: "100%", height: "auto" }}
+              style={{ width: '100%', height: 'auto' }}
             />
           ))}
         </Col>
@@ -34,7 +34,7 @@ export function ProjectDetail({ match }) {
         </Col>
       </Row>
     </Container>
-  );
+  )
 }
 
 // set img to width: 100%, height: auto

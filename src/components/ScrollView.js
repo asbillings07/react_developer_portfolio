@@ -1,16 +1,16 @@
-import React from "react";
-import { Carousel } from "react-bootstrap";
+import React from 'react'
+import { Carousel } from 'react-bootstrap'
 
-export function ScrollView({ projects }) {
+export function ScrollView ({ projects }) {
   return (
-    <Carousel pauseOnHover={true}>
+    <Carousel pauseOnHover>
       {projects.map(project => (
         <Carousel.Item>
           <a href={`/project/${project.id}`}>
             <img
-              className="d-block w-100"
+              className='d-block w-100'
               src={project.image_urls[0]}
-              alt="Project"
+              alt='Project'
             />
           </a>
           <Carousel.Caption>
@@ -20,5 +20,5 @@ export function ScrollView({ projects }) {
         </Carousel.Item>
       ))}
     </Carousel>
-  );
+  )
 }
