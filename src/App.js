@@ -6,7 +6,7 @@ import { About } from './components/About'
 import { ProjectDetail } from './components/ProjectDetail'
 import { Projects } from './components/Projects'
 
-function App() {
+function App () {
   return (
     <Router>
       <Navigation />

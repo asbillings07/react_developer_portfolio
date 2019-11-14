@@ -4,7 +4,7 @@ import { data } from '../data'
 import { Row, Container, Col } from 'react-bootstrap'
 import styled from 'styled-components'
 
-export function Home() {
+export function Home () {
   return (
     <Container>
       <Row>

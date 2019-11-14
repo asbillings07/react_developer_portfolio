@@ -1,7 +1,7 @@
 import React from 'react'
 import { Carousel } from 'react-bootstrap'
 
-export function ScrollView({ projects }) {
+export function ScrollView ({ projects }) {
   return (
     <Carousel pauseOnHover>
       {projects.map(project => (
