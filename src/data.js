@@ -39,7 +39,8 @@ export const data = {
       technologies: ['HTML', 'CSS', 'JavaScript'],
       live_link: 'https://random-quotes-generator.netlify.com/',
       github_link: 'https://github.com/asbillings07/random-quote-generator',
-      image_urls: [`${random1}`, `${random2}`, `${random3}`]
+      image_urls: [`${random1}`, `${random2}`, `${random3}`],
+      isFlipped: false
     },
     {
       id: 1,
@@ -50,7 +51,8 @@ export const data = {
       live_link: 'https://list-pagination-app.netlify.com/',
       github_link:
         'https://github.com/asbillings07/list_pagination_and_filtering-v1',
-      image_urls: [`${pagination1}`, `${pagination2}`, `${pagination3}`]
+      image_urls: [`${pagination1}`, `${pagination2}`, `${pagination3}`],
+      isFlipped: false
     },
     {
       id: 2,
@@ -60,7 +62,8 @@ export const data = {
       technologies: ['HTML', 'CSS', 'JavaScript', 'JQuery'],
       live_link: 'https://interactive-form.netlify.com/',
       github_link: 'https://github.com/asbillings07/js-interactive-form',
-      image_urls: [`${interactive1}`, `${interactive2}`]
+      image_urls: [`${interactive1}`, `${interactive2}`],
+      isFlipped: false
     },
     {
       id: 3,
@@ -70,7 +73,8 @@ export const data = {
       technologies: ['HTML', 'CSS', 'JavaScript', 'JQuery', 'OOP'],
       live_link: 'https://jedi-hunter-game.netlify.com/',
       github_link: 'https://github.com/asbillings07/oop_game-v2',
-      image_urls: [`${phrase1}`, `${phrase2}`, `${phrase3}`]
+      image_urls: [`${phrase1}`, `${phrase2}`, `${phrase3}`],
+      isFlipped: false
     },
     {
       id: 4,
@@ -87,7 +91,8 @@ export const data = {
       ],
       live_link: 'https://public-api-request.netlify.com/',
       github_link: 'https://github.com/asbillings07/public_api_requests',
-      image_urls: [`${api1}`, `${api2}`, `${api3}`]
+      image_urls: [`${api1}`, `${api2}`, `${api3}`],
+      isFlipped: false
     },
     {
       id: 5,
@@ -104,7 +109,8 @@ export const data = {
       ],
       live_link: 'https://gallerize.netlify.com/',
       github_link: 'https://github.com/asbillings07/react_gallery_app',
-      image_urls: [`${gallery1}`, `${gallery2}`, `${gallery3}`]
+      image_urls: [`${gallery1}`, `${gallery2}`, `${gallery3}`],
+      isFlipped: false
     },
     {
       id: 6,
@@ -123,7 +129,8 @@ export const data = {
       ],
       live_link: 'https://sql-library-app.herokuapp.com/books',
       github_link: 'https://github.com/asbillings07/sql_library_manager',
-      image_urls: [`${library1}`, `${library2}`, `${library3}`]
+      image_urls: [`${library1}`, `${library2}`, `${library3}`],
+      isFlipped: false
     },
     {
       id: 7,
@@ -133,7 +140,8 @@ export const data = {
       technologies: ['HTML', 'CSS', 'JavaScript', 'React'],
       live_link: 'https://readysetscore.netlify.com/',
       github_link: 'https://github.com/asbillings07/react-scoreboard-app',
-      image_urls: [`${scoreboard1}`, `${scoreboard2}`, `${scoreboard3}`]
+      image_urls: [`${scoreboard1}`, `${scoreboard2}`, `${scoreboard3}`],
+      isFlipped: false
     },
     {
       id: 8,
@@ -158,7 +166,8 @@ export const data = {
       live_link: 'https://courseshare.netlify.com',
       github_link:
         'https://github.com/asbillings07/full-stack-react-with-restapi',
-      image_urls: [`${course1}`, `${course2}`, `${course3}`]
+      image_urls: [`${course1}`, `${course2}`, `${course3}`],
+      isFlipped: false
     },
     {
       id: 9,
@@ -187,7 +196,8 @@ export const data = {
         `${recommendit2}`,
         `${recommendit3}`,
         `${recommendit4}`
-      ]
+      ],
+      isFlipped: false
     }
   ]
 }
