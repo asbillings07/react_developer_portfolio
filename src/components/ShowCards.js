@@ -13,8 +13,8 @@ export function ShowCards ({ projects }) {
           </FrontCard>
           <BackCard className=' flip-card-back'>
             <Card.Body>
-              <Card.Title>{project.name}</Card.Title>
-              <Card.Subtitle>{project.description}</Card.Subtitle>
+              <Card.Title>{project.project_name}</Card.Title>
+              <SubTitle>{project.description}</SubTitle>
               <Button href={`/project/${project.id}`} variant='primary'>
                 Go Here
               </Button>
@@ -35,6 +35,9 @@ const BackCard = styled(Card)`
   margin: 25px;
   border: 0px;
   box-shadow: 5px 5px 5px;
+`
+const SubTitle = styled(Card.Subtitle)`
+  margin-bottom: 0.75em;
 `
 
 ShowCards.propTypes = {
