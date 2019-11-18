@@ -16,16 +16,16 @@ export function ProjectDetail ({ match }) {
         </Col>
       </Row>
       <Row>
-        <Col md={9}>
+        <ProjectCol md={8}>
           {project.image_urls.map((imageSrc, i) => (
-            <img
+            <ProjectImage
               src={imageSrc}
               alt={`${project.project_name}`}
               key={i}
-              style={{ width: '100%', height: 'auto', margin: '20px' }}
+              style={{}}
             />
           ))}
-        </Col>
+        </ProjectCol>
         <Col md={3}>
           <StyledTopButton block href={project.github_link} target='_blank'>
             GitHub Repo
@@ -49,4 +49,13 @@ const StyledBottomButton = styled(Button)`
 const StyledTopButton = styled(Button)`
   margin-top: 30px;
 `
-// set img to width: 100%, height: auto
+const ProjectImage = styled.img`
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 2px 2px 2px 2px;
+`
+const ProjectCol = styled(Col)`
+  margin-right: 20px;
+`
