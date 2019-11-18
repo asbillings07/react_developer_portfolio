@@ -44,9 +44,9 @@ export const data = {
     },
     {
       id: 1,
-      project_name: 'List Pagination and Filtering',
+      project_name: 'Pagination App',
       description:
-        'This app displays 10 students on one page and provides navigation to jump to a list of more items.',
+        'An app that displays 10 students on one page and provides navigation to jump to a list of more items.',
       technologies: ['HTML', 'CSS', 'JavaScript'],
       live_link: 'https://list-pagination-app.netlify.com/',
       github_link:
@@ -58,7 +58,7 @@ export const data = {
       id: 2,
       project_name: 'Interactive Form',
       description:
-        'This is a form enhanced with JavaScript so that it’s engaging, interactive, and easy to use',
+        'A form enhanced with JavaScript so that it’s engaging, interactive, and easy to use',
       technologies: ['HTML', 'CSS', 'JavaScript', 'JQuery'],
       live_link: 'https://interactive-form.netlify.com/',
       github_link: 'https://github.com/asbillings07/js-interactive-form',
@@ -68,8 +68,7 @@ export const data = {
     {
       id: 3,
       project_name: 'Phrase Game',
-      description:
-        "This is a browser-based, word guessing game: 'Jedi Hunter.' A player tries to guess the phrase by selecting individual letters from an onscreen keyboard before they run out of attempts.",
+      description: "A browser-based, word guessing game: 'Jedi Hunter.'",
       technologies: ['HTML', 'CSS', 'JavaScript', 'JQuery', 'OOP'],
       live_link: 'https://jedi-hunter-game.netlify.com/',
       github_link: 'https://github.com/asbillings07/oop_game-v2',
@@ -78,9 +77,9 @@ export const data = {
     },
     {
       id: 4,
-      project_name: 'Public Api Requests',
+      project_name: 'Employee Directory',
       description:
-        'This project creates an employee directory by communicating with a third-party API.',
+        'An employee directory app created by communicating with a third-party API.',
       technologies: [
         'HTML',
         'CSS',
@@ -97,8 +96,7 @@ export const data = {
     {
       id: 5,
       project_name: 'React Gallery App',
-      description:
-        'This project creates a flickr type clone with the flickr API.',
+      description: 'A flickr type clone app with the flickr API.',
       technologies: [
         'HTML',
         'CSS',
@@ -116,7 +114,7 @@ export const data = {
       id: 6,
       project_name: 'SQL Library Manager',
       description:
-        'This project is a library manager where you can create, view, update and delete books.',
+        'A library manager where you can create, view, update and delete books.',
       technologies: [
         'HTML',
         'CSS',
@@ -136,7 +134,7 @@ export const data = {
       id: 7,
       project_name: 'React Scoreboard',
       description:
-        'This project is a scoreboard for tracking points in a game of your choice, it also includes a timer',
+        'A scoreboard for tracking points in a game of your choice, it also includes a timer',
       technologies: ['HTML', 'CSS', 'JavaScript', 'React'],
       live_link: 'https://readysetscore.netlify.com/',
       github_link: 'https://github.com/asbillings07/react-scoreboard-app',
@@ -147,7 +145,7 @@ export const data = {
       id: 8,
       project_name: 'CourseShare',
       description:
-        'This project is a Full Stack App with React and REST API that allows users to view, create, update and delete courses.',
+        'A Full Stack App that allows users to view, create, update and delete courses.',
       technologies: [
         'HTML',
         'CSS',
@@ -173,7 +171,7 @@ export const data = {
       id: 9,
       project_name: 'Recommendit!',
       description:
-        'An App that allows you to recommend cool places to your friends',
+        'An App that allows you to find and share cool places to your friends',
       technologies: [
         'HTML',
         'CSS',

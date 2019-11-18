@@ -5,7 +5,7 @@ import { PropTypes } from 'prop-types'
 
 export function ShowCards ({ projects }) {
   return projects.map(project => (
-    <Col md={4} key={project.id}>
+    <Col key={project.id}>
       <div className='flip-card'>
         <div className='flip-card-inner'>
           <FrontCard className=' flip-card-front'>
