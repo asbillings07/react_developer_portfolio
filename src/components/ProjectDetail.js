@@ -3,7 +3,7 @@ import { Container, Col, Row, Button } from 'react-bootstrap'
 import { data } from '../data'
 import styled from 'styled-components'
 
-export function ProjectDetail ({ match }) {
+export function ProjectDetail({ match }) {
   const { id } = match.params
   const project = data.projects[id]
 
@@ -22,7 +22,7 @@ export function ProjectDetail ({ match }) {
               src={imageSrc}
               alt={`${project.project_name}`}
               key={i}
-              style={{ width: '100%', height: 'auto' }}
+              style={{ width: '100%', height: 'auto', margin: '20px' }}
             />
           ))}
         </Col>
