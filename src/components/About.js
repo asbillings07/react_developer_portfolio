@@ -2,10 +2,11 @@
 import React from 'react'
 import { Card, Container, Col, Row } from 'react-bootstrap'
 import styled from 'styled-components'
-import profilePic from '../images/profilePic.jpeg'
+import profilePic from '../images/profile_pic.jpeg'
 import Twitter from '../svgs/twitter.svg'
 import Github from '../svgs/github-logo.svg'
 import LinkedIn from '../svgs/linkedin.svg'
+import Medium from '../svgs/medium.svg'
 
 export function About () {
   return (
@@ -26,6 +27,9 @@ export function About () {
               </a>
               <a href='https://twitter.com/abdevelops' target='_blank'>
                 <SVGImage src={Twitter} alt='LinkedIn' />
+              </a>
+              <a href='https://medium.com/@asbillings2007' target='_blank'>
+                <SVGImage src={Medium} alt='Medium' />
               </a>
             </Card.Header>
             <Card.Body></Card.Body>
