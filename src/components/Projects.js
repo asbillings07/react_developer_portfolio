@@ -7,7 +7,7 @@ import { data } from '../data'
 export function Projects () {
   return (
     <Container>
-      <Row>
+      <Row className='justify-content-md-center'>
         <ShowCards projects={data.projects} />
       </Row>
     </Container>
