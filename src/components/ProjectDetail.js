@@ -7,9 +7,18 @@ export function ProjectDetail ({ match }) {
   const { id } = match.params
   const project = data.projects[id]
 
-  const nextProject = match => {
-    if (match.params.id >= 0) {
+  const nextProject = (match, props) => {
+    const { id } = match.params
+    const { projects } = data
+    if (id >= 0 && id < projects.length - 1) {
       window.location.href = `/project/${+id + 1}`
+    }
+  }
+  const prevProject = (match, props) => {
+    const { id } = match.params
+    const { projects } = data
+    if (id < projects.length - 1 && id > 0) {
+      window.location.href = `/project/${+id - 1}`
     }
   }
 
@@ -38,9 +47,20 @@ export function ProjectDetail ({ match }) {
           <StyledBottomButton block href={project.live_link} target='_blank'>
             Live Link
           </StyledBottomButton>
-          <StyledBottomButton block onClick={() => nextProject(match)}>
+          <StyledNextButton
+            variant='info'
+            block
+            onClick={() => nextProject(match)}
+          >
             Next Project
-          </StyledBottomButton>
+          </StyledNextButton>
+          <StyledPrevButton
+            variant='info'
+            block
+            onClick={() => prevProject(match)}
+          >
+            Previous Project
+          </StyledPrevButton>
           <h3>Technologies</h3>
           {project.technologies.map((tech, i) => (
             <p key={i}>{tech}</p>
@@ -57,6 +77,14 @@ const StyledBottomButton = styled(Button)`
 const StyledTopButton = styled(Button)`
   margin-top: 30px;
 `
+const StyledNextButton = styled(Button)`
+  margin-top: 30px;
+  color: ${props => (props.primary ? 'info' : 'danger')};
+`
+const StyledPrevButton = styled(Button)`
+  margin-bottom: 30px;
+  color: ${props => (props.primary ? 'info' : 'danger')};
+`
 const ProjectImage = styled.img`
   width: 100%;
   height: auto;
@@ -67,3 +95,4 @@ const ProjectImage = styled.img`
 const ProjectCol = styled(Col)`
   margin-right: 20px;
 `
+// turn color red when it gets to end
