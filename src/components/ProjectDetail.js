@@ -7,6 +7,12 @@ export function ProjectDetail ({ match }) {
   const { id } = match.params
   const project = data.projects[id]
 
+  const nextProject = match => {
+    if (match.params.id >= 0) {
+      window.location.href = `/project/${+id + 1}`
+    }
+  }
+
   return (
     <Container>
       <Row>
@@ -22,7 +28,6 @@ export function ProjectDetail ({ match }) {
               src={imageSrc}
               alt={`${project.project_name}`}
               key={i}
-              style={{}}
             />
           ))}
         </ProjectCol>
@@ -32,6 +37,9 @@ export function ProjectDetail ({ match }) {
           </StyledTopButton>
           <StyledBottomButton block href={project.live_link} target='_blank'>
             Live Link
+          </StyledBottomButton>
+          <StyledBottomButton block onClick={() => nextProject(match)}>
+            Next Project
           </StyledBottomButton>
           <h3>Technologies</h3>
           {project.technologies.map((tech, i) => (

@@ -19,8 +19,8 @@ export function Home () {
           <p>
             You can get to any of my projects by clicking on the picture of the
             project you'd like to see, or by navigating to projects section. To
-            learn more about me click the 'About Me' section. If you like what
-            you see you can reach out to me by using the contact form under the
+            learn more about me click the 'About' section. If you like what you
+            see you can reach out to me by using the contact form under the
             'Contact Me' section.
           </p>
           <P>
