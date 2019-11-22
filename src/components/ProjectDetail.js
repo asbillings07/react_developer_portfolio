@@ -8,17 +8,23 @@ export function ProjectDetail ({ match }) {
   const project = data.projects[id]
 
   const nextProject = (match, props) => {
+    const nextButton = document.getElementById('next')
     const { id } = match.params
     const { projects } = data
     if (id >= 0 && id < projects.length - 1) {
       window.location.href = `/project/${+id + 1}`
+    } else {
+      nextButton.disabled = true
     }
   }
   const prevProject = (match, props) => {
+    const prevButton = document.getElementById('prev')
     const { id } = match.params
     const { projects } = data
-    if (id < projects.length - 1 && id > 0) {
+    if (id <= projects.length - 1 && id > 0) {
       window.location.href = `/project/${+id - 1}`
+    } else {
+      prevButton.disabled = true
     }
   }
 
@@ -48,14 +54,16 @@ export function ProjectDetail ({ match }) {
             Live Link
           </StyledBottomButton>
           <StyledNextButton
-            variant='info'
             block
+            variant='info'
+            id='next'
             onClick={() => nextProject(match)}
           >
             Next Project
           </StyledNextButton>
           <StyledPrevButton
             variant='info'
+            id='prev'
             block
             onClick={() => prevProject(match)}
           >
@@ -79,7 +87,7 @@ const StyledTopButton = styled(Button)`
 `
 const StyledNextButton = styled(Button)`
   margin-top: 30px;
-  color: ${props => (props.primary ? 'info' : 'danger')};
+  variant: ${props => (props.primary ? 'info' : 'danger')};
 `
 const StyledPrevButton = styled(Button)`
   margin-bottom: 30px;
