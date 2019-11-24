@@ -11,7 +11,7 @@ import Email from '../svgs/email.svg'
 
 export function About () {
   return (
-    <Container>
+    <StyledContainer>
       <Row>
         <Col md={6}>
           <StyledCard style={{ width: '18rem' }}>
@@ -86,7 +86,7 @@ export function About () {
           </h6>
         </Col>
       </Row>
-    </Container>
+    </StyledContainer>
   )
 }
 
@@ -103,4 +103,7 @@ const EmailImage = styled.img`
   height: 55px;
   width: 55px;
   padding: 3px;
+`
+const StyledContainer = styled(Container)`
+  background-image: url('../images/dust_scratches.png');
 `

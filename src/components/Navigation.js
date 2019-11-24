@@ -5,8 +5,8 @@ import styled from 'styled-components'
 export const Navigation = () => (
   <NavDiv>
     <NavBar collapseOnSelect expand='lg'>
-      <NavBarTitle aria-label='App Title is RecommendIt' href='/'>
-        Recommend It!
+      <NavBarTitle aria-label='Nav Title is Aaron Billings' href='/'>
+        Aaron Billings
       </NavBarTitle>
       <Navbar.Toggle aria-controls='responsive-navbar-nav' />
       <Navbar.Collapse id='responsive-navbar-nav'>
