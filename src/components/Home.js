@@ -86,6 +86,7 @@ const Body = styled.h3`
 `
 const Heading = styled.h1`
   margin-top: 100px;
+  font-family: 'Permanent Marker';
 `
 const ArticleHeading = styled.h2`
   margin-top: 50px;
