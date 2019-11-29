@@ -40,9 +40,7 @@ export function About () {
               </a>
             </Card.Header>
             <Card.Body>
-              You can click on any of the social media icons above to connect
-              with me. If you just want to send me an email, you can click the
-              email button above.
+              You can click on any of the icons above to connect with me.
             </Card.Body>
           </StyledCard>
         </Col>
@@ -106,4 +104,6 @@ const EmailImage = styled.img`
 `
 const StyledContainer = styled(Container)`
   background-image: url('../images/dust_scratches.png');
+  margin-top: 25px;
+  margin-bottom: 100px;
 `
