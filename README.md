@@ -1,3 +1,11 @@
+# My Portfolio
+
+## Welcome to my portfolio!
+
+## Here you will see a number of project that I have completed that you are able to see the source code of and play with. Enjoy!
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5572d05f-d617-42ec-bd83-10145b1299e0/deploy-status)](https://app.netlify.com/sites/aaronbillings/deploys)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
