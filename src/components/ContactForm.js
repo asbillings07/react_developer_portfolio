@@ -17,10 +17,13 @@ const useStyles = makeStyles(theme => ({
   },
   textArea: {
     marginTop: 25,
-    marginBottom: 500
+    marginBottom: 25
   },
   firstName: {
     marginTop: 25
+  },
+  SubmitButton: {
+    marginBottom: 500
   }
 }))
 
@@ -43,6 +46,7 @@ export const ContactForm = () => {
           <input name='form-name' value='contact' type='hidden' />
           <FormGroup row>
             <TextField
+              name='First Name'
               className={classes.firstName}
               id='standard-basic'
               label='First Name'
@@ -51,6 +55,7 @@ export const ContactForm = () => {
           </FormGroup>
           <FormGroup row>
             <TextField
+              name='Last Name'
               id='standard-basic'
               label='Last Name'
               placeholder='Last Name'
@@ -58,6 +63,7 @@ export const ContactForm = () => {
           </FormGroup>
           <FormGroup row>
             <TextField
+              name='Email'
               id='standard-basic'
               label='Email Address'
               placeholder='Email Address'
@@ -66,6 +72,7 @@ export const ContactForm = () => {
           <FormGroup row>
             <TextareaAutosize
               className={classes.textArea}
+              name='Message'
               aria-label='minimum height'
               rows={3}
               label='message'
@@ -73,7 +80,12 @@ export const ContactForm = () => {
             />
           </FormGroup>
           <FormGroup row>
-            <Button type='submit' color='primary' variant='contained'>
+            <Button
+              className={classes.SubmitButton}
+              type='submit'
+              color='primary'
+              variant='contained'
+            >
               Send
             </Button>
           </FormGroup>
