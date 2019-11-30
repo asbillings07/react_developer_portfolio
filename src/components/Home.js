@@ -1,99 +1,126 @@
 import React from 'react'
-import { Row, Container, Col, Card, Button } from 'react-bootstrap'
-import styled from 'styled-components'
-import BG from '../images/yuriy-kovalev-nN1HSDtKdlw-unsplash.jpg'
-export function Home () {
+import Button from '@material-ui/core/Button'
+import Card from '@material-ui/core/Card'
+import CardActions from '@material-ui/core/CardActions'
+import CardContent from '@material-ui/core/CardContent'
+import CardMedia from '@material-ui/core/CardMedia'
+import CssBaseline from '@material-ui/core/CssBaseline'
+import Grid from '@material-ui/core/Grid'
+import Typography from '@material-ui/core/Typography'
+import { makeStyles } from '@material-ui/core/styles'
+import Container from '@material-ui/core/Container'
+import { data } from '../data'
+
+const useStyles = makeStyles(theme => ({
+  icon: {
+    marginRight: theme.spacing(2)
+  },
+  heroContent: {
+    backgroundColor: theme.palette.background.paper,
+    padding: theme.spacing(8, 0, 6)
+  },
+  heroButtons: {
+    marginTop: theme.spacing(4)
+  },
+  cardGrid: {
+    paddingTop: theme.spacing(8),
+    paddingBottom: theme.spacing(8)
+  },
+  card: {
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column'
+  },
+  cardMedia: {
+    paddingTop: '56.25%' // 16:9
+  },
+  cardContent: {
+    flexGrow: 1
+  },
+  footer: {
+    backgroundColor: theme.palette.background.paper,
+    padding: theme.spacing(6)
+  }
+}))
+
+export const Home = () => {
+  const cards = data.projects
+  const classes = useStyles()
+
   return (
-    <Container>
-      <img src={BG} alt='bg' className='bg' />
-      <Row>
-        <Col>
-          <Heading>Hi, I'm Aaron & I'm a Full Stack Developer</Heading>
-          <article>
-            <Body>
-              Check out my <a href='/projects'>&nbsp;projects</a>&nbsp;and
-              connect with me on&nbsp;
-              <a
-                href='https://twitter.com/abdevelops'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                Twitter&nbsp;
-              </a>
-              or&nbsp;
-              <a
-                href='https://www.linkedin.com/in/aaron-billings-9b429610a/'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                Linkedin
-              </a>
-              .
-            </Body>
-            <Body>Thanks for stopping by! Have Fun and Enjoy your stay!</Body>
-          </article>
-        </Col>
-      </Row>
-      <Row>
-        <Col>
-          <ArticleHeading>Check out my latest articles</ArticleHeading>
-        </Col>
-      </Row>
-      <Row>
-        <Col md={4}>
-          <ArticleCard>
-            <Card.Body>
-              <Card.Title>Git Hooks And You</Card.Title>
-              <Card.Text>
-                Learn about what Git Hooks are and how to use them in your next
-                project.
-              </Card.Text>
-              <Button
-                href='https://medium.com/@asbillings2007/git-hooks-and-you-492b7794fa6c'
-                target='_blank'
-                variant='info'
-              >
-                Read Article
-              </Button>
-            </Card.Body>
-          </ArticleCard>
-        </Col>
-        <Col md={4}>
-          <ArticleCard>
-            <Card.Body>
-              <Card.Title>My Software Developer Journey</Card.Title>
-              <Card.Text>
-                Get to know my journey as a Software Developer and how I learned
-                how to code.
-              </Card.Text>
-              <Button
-                href='https://medium.com/@asbillings2007/my-software-developer-journey-680c1b14d9a3'
-                target='_blank'
-                variant='info'
-              >
-                Read Article
-              </Button>
-            </Card.Body>
-          </ArticleCard>
-        </Col>
-      </Row>
-    </Container>
+    <>
+      <CssBaseline />
+      <main>
+        {/* Intro Unit */}
+        <div className={classes.heroContent}>
+          <Container maxWidth='sm'>
+            <Typography
+              component='h1'
+              variant='h2'
+              align='center'
+              color='textPrimary'
+              gutterBottom
+            >
+              Portfolio
+            </Typography>
+            <Typography
+              variant='h5'
+              align='center'
+              color='textSecondary'
+              paragraph
+            >
+              Hi, I'm Aaron! I'm a full stack developer. Below is a collection
+              of my projects. Each project has the source code as well as a live
+              view link where you can play around with it. Enjoy your stay!
+            </Typography>
+            <div className={classes.heroButtons}>
+              <Grid container spacing={2} justify='center'>
+                <Grid item>
+                  <Button href='/about' variant='contained' color='primary'>
+                    Learn More about My Journey
+                  </Button>
+                </Grid>
+                <Grid item>
+                  <Button href='/contact' variant='outlined' color='primary'>
+                    Contact Me
+                  </Button>
+                </Grid>
+              </Grid>
+            </div>
+          </Container>
+        </div>
+        <Container className={classes.cardGrid} maxWidth='md'>
+          {/* End Intro Unit */}
+          <Grid container spacing={4}>
+            {cards.map(project => (
+              <Grid item key={project.id} xs={12} sm={6} md={4}>
+                <Card className={classes.card}>
+                  <CardMedia
+                    className={classes.cardMedia}
+                    image={project.image_urls[0]}
+                    title='Image title'
+                  />
+                  <CardContent className={classes.cardContent}>
+                    <Typography gutterBottom variant='h5' component='h2'>
+                      {project.project_name}
+                    </Typography>
+                    <Typography>{project.description}</Typography>
+                  </CardContent>
+                  <CardActions>
+                    <Button
+                      size='small'
+                      color='primary'
+                      href={`/project/${project.id}`}
+                    >
+                      View
+                    </Button>
+                  </CardActions>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
+        </Container>
+      </main>
+    </>
   )
 }
-
-const Body = styled.h3`
-  margin-top: 25px;
-`
-const Heading = styled.h1`
-  margin-top: 100px;
-  font-family: 'Permanent Marker';
-`
-const ArticleHeading = styled.h2`
-  margin-top: 50px;
-  margin-bottom: 50px;
-`
-const ArticleCard = styled(Card)`
-  width: 18rem;
-  height: 100%;
-  margin-bottom: 20px;
-`
