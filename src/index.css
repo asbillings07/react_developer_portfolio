@@ -3,7 +3,6 @@ body {
   font-family: 'Playfair Display', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url(images/dust_scratches.png);
 }
 img.bg {
   /* Set rules to fill background */

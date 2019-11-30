@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-function Copyright () {
+const Copyright = () => {
   return (
     <Typography variant='body2' color='textSecondary' align='center'>
       {'Copyright © '}
@@ -29,13 +29,12 @@ function Copyright () {
   )
 }
 
-export function Footer () {
+export const Footer = () => {
   const classes = useStyles()
   return (
     <footer className={classes.footer}>
       <Typography variant='body2' align='center' gutterBottom>
-        Ah, you've reached the bottom. Well, you might as well press on a
-        button.
+        Ah, you've reached the bottom. You might as well press a button.
       </Typography>
       <Container>
         <a
