@@ -41,6 +41,7 @@ export const ContactForm = () => {
           <input name='form-name' value='contact' type='hidden' />
           <FormGroup row>
             <TextField
+              required
               name='First Name'
               className={classes.firstName}
               label='First Name'
@@ -49,6 +50,7 @@ export const ContactForm = () => {
           </FormGroup>
           <FormGroup row>
             <TextField
+              required
               name='Last Name'
               label='Last Name'
               placeholder='Last Name'
@@ -56,10 +58,19 @@ export const ContactForm = () => {
           </FormGroup>
           <FormGroup row>
             <TextField
+              required
               name='Email'
               type='email'
               label='Email Address'
               placeholder='Email Address'
+            />
+          </FormGroup>
+          <FormGroup row>
+            <TextField
+              required
+              name='Company'
+              label='Company'
+              placeholder='Name of your company'
             />
           </FormGroup>
           <FormGroup row>
