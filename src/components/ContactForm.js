@@ -39,7 +39,7 @@ export const ContactForm = () => {
       <Container>
         <form
           className={classes.root}
-          name='contact'
+          form-name='contact'
           method='post'
           data-netlify='true'
         >
