@@ -43,12 +43,11 @@ export const ContactForm = () => {
           method='POST'
           data-netlify='true'
         >
-          <input name='form-name' value='contact' type='hidden' />
+          <input name='contact' value='contact' type='hidden' />
           <FormGroup row>
             <TextField
               name='First Name'
               className={classes.firstName}
-              id='standard-basic'
               label='First Name'
               placeholder='First Name'
             />
@@ -56,7 +55,6 @@ export const ContactForm = () => {
           <FormGroup row>
             <TextField
               name='Last Name'
-              id='standard-basic'
               label='Last Name'
               placeholder='Last Name'
             />
@@ -64,7 +62,7 @@ export const ContactForm = () => {
           <FormGroup row>
             <TextField
               name='Email'
-              id='standard-basic'
+              type='email'
               label='Email Address'
               placeholder='Email Address'
             />
