@@ -37,13 +37,8 @@ export const ContactForm = () => {
         </Typography>
       </HeadingContainer>
       <Container>
-        <form
-          className={classes.root}
-          name='contact'
-          method='POST'
-          data-netlify='true'
-        >
-          <input name='contact' value='contact' type='hidden' />
+        <form className={classes.root} name='contact' method='POST'>
+          <input name='form-name' value='contact' type='hidden' />
           <FormGroup row>
             <TextField
               name='First Name'
