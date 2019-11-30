@@ -10,6 +10,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
 import PhotoAlbumIcon from '@material-ui/icons/PhotoAlbum'
 import PersonIcon from '@material-ui/icons/Person'
+import ContactMailIcon from '@material-ui/icons/ContactMail'
 
 const StyledMenu = withStyles({
   paper: {
@@ -104,6 +105,14 @@ export const AppNavBar = () => {
               </ListItemIcon>
               <a href='/about'>
                 <ListItemText primary='About Me' />
+              </a>
+            </StyledMenuItem>
+            <StyledMenuItem>
+              <ListItemIcon>
+                <ContactMailIcon fontSize='small' />
+              </ListItemIcon>
+              <a href='/contact'>
+                <ListItemText primary='Contact Me' />
               </a>
             </StyledMenuItem>
           </StyledMenu>

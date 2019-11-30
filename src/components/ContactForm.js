@@ -5,6 +5,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import { FormGroup } from '@material-ui/core'
 import styled from 'styled-components'
 import Typography from '@material-ui/core/Typography'
+import Button from '@material-ui/core/Button'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -39,6 +40,7 @@ export const ContactForm = () => {
           method='post'
           data-netlify='true'
         >
+          <input name='form-name' value='contact' type='hidden' />
           <FormGroup row>
             <TextField
               className={classes.firstName}
@@ -66,8 +68,14 @@ export const ContactForm = () => {
               className={classes.textArea}
               aria-label='minimum height'
               rows={3}
+              label='message'
               placeholder='What can I help you with?'
             />
+          </FormGroup>
+          <FormGroup row>
+            <Button type='submit' color='primary' variant='contained'>
+              Send
+            </Button>
           </FormGroup>
         </form>
       </Container>

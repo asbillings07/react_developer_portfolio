@@ -1,13 +1,29 @@
 import React from 'react'
-import { Container, Col, Row, Button } from 'react-bootstrap'
+import { Container, Col, Row } from 'react-bootstrap'
 import { data } from '../data'
 import styled from 'styled-components'
+import Typography from '@material-ui/core/Typography'
+import { makeStyles } from '@material-ui/core/styles'
+import Button from '@material-ui/core/Button'
+import Fab from '@material-ui/core/Fab'
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos'
+import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos'
 
-export function ProjectDetail ({ match }) {
+const useStyles = makeStyles(theme => ({
+  Title: {
+    marginTop: 25
+  },
+  Button: {
+    marginBottom: 20,
+    marginRight: 20
+  }
+}))
+
+export const ProjectDetail = ({ match }) => {
   const { id } = match.params
   const project = data.projects[id]
 
-  const nextProject = (match, props) => {
+  const nextProject = match => {
     const nextButton = document.getElementById('next')
     const { id } = match.params
     const { projects } = data
@@ -17,7 +33,7 @@ export function ProjectDetail ({ match }) {
       nextButton.disabled = true
     }
   }
-  const prevProject = (match, props) => {
+  const prevProject = match => {
     const prevButton = document.getElementById('prev')
     const { id } = match.params
     const { projects } = data
@@ -27,13 +43,19 @@ export function ProjectDetail ({ match }) {
       prevButton.disabled = true
     }
   }
-
+  const classes = useStyles()
   return (
     <Container>
+      <br />
       <Row>
         <Col md={9}>
-          <h1>{project.project_name}</h1>
-          <h3>{project.description}</h3>
+          <Typography variant='h1' color='textPrimary'>
+            {project.project_name}
+          </Typography>
+          <br />
+          <Typography variant='h4' color='textSecondary'>
+            {project.description}
+          </Typography>
         </Col>
       </Row>
       <Row>
@@ -47,28 +69,43 @@ export function ProjectDetail ({ match }) {
           ))}
         </ProjectCol>
         <Col md={3}>
-          <StyledTopButton block href={project.github_link} target='_blank'>
-            GitHub Repo
-          </StyledTopButton>
-          <StyledBottomButton block href={project.live_link} target='_blank'>
-            Live Link
-          </StyledBottomButton>
-          <StyledNextButton
-            block
-            variant='info'
-            id='next'
-            onClick={() => nextProject(match)}
-          >
-            Next Project
-          </StyledNextButton>
-          <StyledPrevButton
-            variant='info'
-            id='prev'
-            block
+          <Fab
             onClick={() => prevProject(match)}
+            {...(match.params.id === 0 ? 'disabled' : '')}
+            className={classes.Button}
+            id='prev'
+            aria-label='previous'
           >
-            Previous Project
-          </StyledPrevButton>
+            <ArrowBackIosIcon />
+          </Fab>
+          <Fab
+            onClick={() => nextProject(match)}
+            className={classes.Button}
+            id='next'
+            aria-label='next'
+          >
+            <ArrowForwardIosIcon className={classes.extendedIcon} />
+          </Fab>
+          <Button
+            size='large'
+            className={classes.Button}
+            variant='contained'
+            color='primary'
+            href={project.github_link}
+            target='_blank'
+          >
+            GitHub Repo
+          </Button>
+          <Button
+            size='large'
+            className={classes.Button}
+            variant='contained'
+            color='primary'
+            href={project.live_link}
+            target='_blank'
+          >
+            View Project
+          </Button>
           <h3>Technologies</h3>
           {project.technologies.map((tech, i) => (
             <p key={i}>{tech}</p>
@@ -79,20 +116,6 @@ export function ProjectDetail ({ match }) {
   )
 }
 
-const StyledBottomButton = styled(Button)`
-  margin-bottom: 30px;
-`
-const StyledTopButton = styled(Button)`
-  margin-top: 30px;
-`
-const StyledNextButton = styled(Button)`
-  margin-top: 30px;
-  variant: ${props => (props.primary ? 'info' : 'danger')};
-`
-const StyledPrevButton = styled(Button)`
-  margin-bottom: 30px;
-  color: ${props => (props.primary ? 'info' : 'danger')};
-`
 const ProjectImage = styled.img`
   width: 100%;
   height: auto;

@@ -43,7 +43,7 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-export function Home () {
+export const Home = () => {
   const cards = data.projects
   const classes = useStyles()
 
@@ -81,12 +81,7 @@ export function Home () {
                   </Button>
                 </Grid>
                 <Grid item>
-                  <Button
-                    href='mailto:abdevelops@gmail.com?subject=Thanks%20For%20Reaching%20Out&body=I%27m%20looking%20forward%20to%20connecting%20with%20you.%20You%20can%20replace%20this%20message%20with%20your%20own.%20'
-                    target='_blank'
-                    variant='outlined'
-                    color='primary'
-                  >
+                  <Button href='/contact' variant='outlined' color='primary'>
                     Contact Me
                   </Button>
                 </Grid>
