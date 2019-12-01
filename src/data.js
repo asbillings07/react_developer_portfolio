@@ -33,142 +33,6 @@ export const data = {
   projects: [
     {
       id: 0,
-      project_name: 'Random Quote Generator',
-      description:
-        'A program that displays a randomly selected quote each time the user clicks a button',
-      technologies: ['HTML', 'CSS', 'JavaScript'],
-      live_link: 'https://random-quotes-generator.netlify.com/',
-      github_link: 'https://github.com/asbillings07/random-quote-generator',
-      image_urls: [`${random1}`, `${random2}`, `${random3}`],
-      isFlipped: false
-    },
-    {
-      id: 1,
-      project_name: 'Pagination App',
-      description:
-        'An app that displays 10 students on one page and provides navigation to jump to a list of more items.',
-      technologies: ['HTML', 'CSS', 'JavaScript'],
-      live_link: 'https://list-pagination-app.netlify.com/',
-      github_link:
-        'https://github.com/asbillings07/list_pagination_and_filtering-v1',
-      image_urls: [`${pagination1}`, `${pagination2}`, `${pagination3}`],
-      isFlipped: false
-    },
-    {
-      id: 2,
-      project_name: 'Interactive Form',
-      description:
-        'A form enhanced with JavaScript so that it’s engaging, interactive, and easy to use',
-      technologies: ['HTML', 'CSS', 'JavaScript', 'JQuery'],
-      live_link: 'https://interactive-form.netlify.com/',
-      github_link: 'https://github.com/asbillings07/js-interactive-form',
-      image_urls: [`${interactive1}`, `${interactive2}`],
-      isFlipped: false
-    },
-    {
-      id: 3,
-      project_name: 'Phrase Game',
-      description: "A browser-based, word guessing game: 'Jedi Hunter.'",
-      technologies: ['HTML', 'CSS', 'JavaScript', 'JQuery', 'OOP'],
-      live_link: 'https://jedi-hunter-game.netlify.com/',
-      github_link: 'https://github.com/asbillings07/oop_game-v2',
-      image_urls: [`${phrase1}`, `${phrase2}`, `${phrase3}`],
-      isFlipped: false
-    },
-    {
-      id: 4,
-      project_name: 'Employee Directory',
-      description:
-        'An employee directory app created by communicating with a third-party API.',
-      technologies: [
-        'HTML',
-        'CSS',
-        'JavaScript',
-        'JQuery',
-        'AJAX',
-        'Fetch API'
-      ],
-      live_link: 'https://public-api-request.netlify.com/',
-      github_link: 'https://github.com/asbillings07/public_api_requests',
-      image_urls: [`${api1}`, `${api2}`, `${api3}`],
-      isFlipped: false
-    },
-    {
-      id: 5,
-      project_name: 'React Gallery App',
-      description: 'A flickr type clone app with the flickr API.',
-      technologies: [
-        'HTML',
-        'CSS',
-        'JavaScript',
-        'React',
-        'Axios',
-        'Fetch API'
-      ],
-      live_link: 'https://gallerize.netlify.com/',
-      github_link: 'https://github.com/asbillings07/react_gallery_app',
-      image_urls: [`${gallery1}`, `${gallery2}`, `${gallery3}`],
-      isFlipped: false
-    },
-    {
-      id: 6,
-      project_name: 'SQL Library Manager',
-      description:
-        'A library manager where you can create, view, update and delete books.',
-      technologies: [
-        'HTML',
-        'CSS',
-        'JavaScript',
-        'SQL',
-        'Node',
-        'Sequelize ORM',
-        'Pug',
-        'Express'
-      ],
-      live_link: 'https://sql-library-app.herokuapp.com/books',
-      github_link: 'https://github.com/asbillings07/sql_library_manager',
-      image_urls: [`${library1}`, `${library2}`, `${library3}`],
-      isFlipped: false
-    },
-    {
-      id: 7,
-      project_name: 'React Scoreboard',
-      description:
-        'A scoreboard for tracking points in a game of your choice, it also includes a timer',
-      technologies: ['HTML', 'CSS', 'JavaScript', 'React'],
-      live_link: 'https://readysetscore.netlify.com/',
-      github_link: 'https://github.com/asbillings07/react-scoreboard-app',
-      image_urls: [`${scoreboard1}`, `${scoreboard2}`, `${scoreboard3}`],
-      isFlipped: false
-    },
-    {
-      id: 8,
-      project_name: 'CourseShare',
-      description:
-        'A Full Stack App that allows users to view, create, update and delete courses.',
-      technologies: [
-        'HTML',
-        'CSS',
-        'JavaScript',
-        'SQL',
-        'Node',
-        'Sequelize ORM',
-        'REST API',
-        'Express',
-        'React',
-        'bcrypt',
-        'basic-auth',
-        'Fetch API',
-        'Axios'
-      ],
-      live_link: 'https://courseshare.netlify.com',
-      github_link:
-        'https://github.com/asbillings07/full-stack-react-with-restapi',
-      image_urls: [`${course1}`, `${course2}`, `${course3}`],
-      isFlipped: false
-    },
-    {
-      id: 9,
       project_name: 'Recommendit!',
       description:
         'An App that allows you to find and share cool places to your friends',
@@ -195,6 +59,142 @@ export const data = {
         `${recommendit3}`,
         `${recommendit4}`
       ],
+      isFlipped: false
+    },
+    {
+      id: 1,
+      project_name: 'CourseShare',
+      description:
+        'A Full Stack App that allows users to view, create, update and delete courses.',
+      technologies: [
+        'HTML',
+        'CSS',
+        'JavaScript',
+        'SQL',
+        'Node',
+        'Sequelize ORM',
+        'REST API',
+        'Express',
+        'React',
+        'bcrypt',
+        'basic-auth',
+        'Fetch API',
+        'Axios'
+      ],
+      live_link: 'https://courseshare.netlify.com',
+      github_link:
+        'https://github.com/asbillings07/full-stack-react-with-restapi',
+      image_urls: [`${course1}`, `${course2}`, `${course3}`],
+      isFlipped: false
+    },
+    {
+      id: 2,
+      project_name: 'React Scoreboard',
+      description:
+        'A scoreboard for tracking points in a game of your choice, it also includes a timer',
+      technologies: ['HTML', 'CSS', 'JavaScript', 'React'],
+      live_link: 'https://readysetscore.netlify.com/',
+      github_link: 'https://github.com/asbillings07/react-scoreboard-app',
+      image_urls: [`${scoreboard1}`, `${scoreboard2}`, `${scoreboard3}`],
+      isFlipped: false
+    },
+    {
+      id: 3,
+      project_name: 'SQL Library Manager',
+      description:
+        'A library manager where you can create, view, update and delete books.',
+      technologies: [
+        'HTML',
+        'CSS',
+        'JavaScript',
+        'SQL',
+        'Node',
+        'Sequelize ORM',
+        'Pug',
+        'Express'
+      ],
+      live_link: 'https://sql-library-app.herokuapp.com/books',
+      github_link: 'https://github.com/asbillings07/sql_library_manager',
+      image_urls: [`${library1}`, `${library2}`, `${library3}`],
+      isFlipped: false
+    },
+    {
+      id: 4,
+      project_name: 'React Gallery App',
+      description: 'A flickr type clone app with the flickr API.',
+      technologies: [
+        'HTML',
+        'CSS',
+        'JavaScript',
+        'React',
+        'Axios',
+        'Fetch API'
+      ],
+      live_link: 'https://gallerize.netlify.com/',
+      github_link: 'https://github.com/asbillings07/react_gallery_app',
+      image_urls: [`${gallery1}`, `${gallery2}`, `${gallery3}`],
+      isFlipped: false
+    },
+    {
+      id: 5,
+      project_name: 'Employee Directory',
+      description:
+        'An employee directory app created by communicating with a third-party API.',
+      technologies: [
+        'HTML',
+        'CSS',
+        'JavaScript',
+        'JQuery',
+        'AJAX',
+        'Fetch API'
+      ],
+      live_link: 'https://public-api-request.netlify.com/',
+      github_link: 'https://github.com/asbillings07/public_api_requests',
+      image_urls: [`${api1}`, `${api2}`, `${api3}`],
+      isFlipped: false
+    },
+    {
+      id: 6,
+      project_name: 'Phrase Game',
+      description: "A browser-based, word guessing game: 'Jedi Hunter.'",
+      technologies: ['HTML', 'CSS', 'JavaScript', 'JQuery', 'OOP'],
+      live_link: 'https://jedi-hunter-game.netlify.com/',
+      github_link: 'https://github.com/asbillings07/oop_game-v2',
+      image_urls: [`${phrase1}`, `${phrase2}`, `${phrase3}`],
+      isFlipped: false
+    },
+    {
+      id: 7,
+      project_name: 'Interactive Form',
+      description:
+        'A form enhanced with JavaScript so that it’s engaging, interactive, and easy to use',
+      technologies: ['HTML', 'CSS', 'JavaScript', 'JQuery'],
+      live_link: 'https://interactive-form.netlify.com/',
+      github_link: 'https://github.com/asbillings07/js-interactive-form',
+      image_urls: [`${interactive1}`, `${interactive2}`],
+      isFlipped: false
+    },
+    {
+      id: 8,
+      project_name: 'Pagination App',
+      description:
+        'An app that displays 10 students on one page and provides navigation to jump to a list of more items.',
+      technologies: ['HTML', 'CSS', 'JavaScript'],
+      live_link: 'https://list-pagination-app.netlify.com/',
+      github_link:
+        'https://github.com/asbillings07/list_pagination_and_filtering-v1',
+      image_urls: [`${pagination1}`, `${pagination2}`, `${pagination3}`],
+      isFlipped: false
+    },
+    {
+      id: 9,
+      project_name: 'Random Quote Generator',
+      description:
+        'A program that displays a randomly selected quote each time the user clicks a button',
+      technologies: ['HTML', 'CSS', 'JavaScript'],
+      live_link: 'https://random-quotes-generator.netlify.com/',
+      github_link: 'https://github.com/asbillings07/random-quote-generator',
+      image_urls: [`${random1}`, `${random2}`, `${random3}`],
       isFlipped: false
     }
   ]
