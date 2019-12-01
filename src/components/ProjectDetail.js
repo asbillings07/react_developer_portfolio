@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button'
+import ButtonGroup from '@material-ui/core/ButtonGroup'
 import Fab from '@material-ui/core/Fab'
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos'
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos'
@@ -14,8 +15,15 @@ const useStyles = makeStyles(theme => ({
     marginTop: 25
   },
   Button: {
-    marginBottom: 20,
+    marginBottom: 40,
     marginRight: 20
+  },
+  nextbutton: {
+    marginBottom: 30,
+    marginRight: 20
+  },
+  viewProject: {
+    marginBottom: 50
   }
 }))
 
@@ -49,7 +57,7 @@ export const ProjectDetail = ({ match }) => {
       <br />
       <Row>
         <Col md={9}>
-          <Typography variant='h1' color='textPrimary'>
+          <Typography variant='h3' color='textPrimary'>
             {project.project_name}
           </Typography>
           <br />
@@ -68,49 +76,57 @@ export const ProjectDetail = ({ match }) => {
             />
           ))}
         </ProjectCol>
-        <Col md={3}>
+        <ButtonCol md={3}>
           <Fab
             onClick={() => prevProject(match)}
             {...(match.params.id === 0 ? 'disabled' : '')}
-            className={classes.Button}
+            className={classes.nextbutton}
             id='prev'
             aria-label='previous'
+            variant='extended'
           >
             <ArrowBackIosIcon />
+            Prev
           </Fab>
           <Fab
             onClick={() => nextProject(match)}
-            className={classes.Button}
+            className={classes.nextbutton}
             id='next'
             aria-label='next'
+            variant='extended'
           >
             <ArrowForwardIosIcon className={classes.extendedIcon} />
+            Next
           </Fab>
-          <Button
-            size='large'
-            className={classes.Button}
+          <ButtonGroup
+            className={classes.viewProject}
             variant='contained'
-            color='primary'
-            href={project.github_link}
-            target='_blank'
-          >
-            GitHub Repo
-          </Button>
-          <Button
             size='large'
-            className={classes.Button}
-            variant='contained'
-            color='primary'
-            href={project.live_link}
-            target='_blank'
           >
-            View Project
-          </Button>
+            <Button
+              size='large'
+              variant='contained'
+              color='primary'
+              href={project.github_link}
+              target='_blank'
+            >
+              GitHub
+            </Button>
+            <Button
+              size='large'
+              variant='contained'
+              color='primary'
+              href={project.live_link}
+              target='_blank'
+            >
+              Live View
+            </Button>
+          </ButtonGroup>
           <h3>Technologies</h3>
           {project.technologies.map((tech, i) => (
             <p key={i}>{tech}</p>
           ))}
-        </Col>
+        </ButtonCol>
       </Row>
     </Container>
   )
@@ -125,5 +141,8 @@ const ProjectImage = styled.img`
 `
 const ProjectCol = styled(Col)`
   margin-right: 20px;
+`
+const ButtonCol = styled(Col)`
+  margin-top: 25px;
 `
 // turn color red when it gets to end
