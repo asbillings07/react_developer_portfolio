@@ -37,7 +37,12 @@ export const ContactForm = () => {
         </Typography>
       </HeadingContainer>
       <Container>
-        <form className={classes.root} name='contact' method='POST'>
+        <form
+          className={classes.root}
+          name='contact'
+          method='POST'
+          action='/forms/success'
+        >
           <input name='form-name' value='contact' type='hidden' />
           <FormGroup row>
             <TextField
@@ -106,4 +111,5 @@ const Container = styled.div`
 const HeadingContainer = styled.div`
   display: flex;
   justify-content: center;
+  margin-top: 50px;
 `
