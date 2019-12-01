@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-no-target-blank */
 import React from 'react'
 import { Container, Col, Row } from 'react-bootstrap'
 import styled from 'styled-components'
@@ -36,41 +35,12 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-export function About () {
+export const About = () => {
   const classes = useStyles()
   return (
     <StyledContainer>
       <Row>
         <Col md={6}>
-          {/* <StyledCard style={{ width: '18rem' }}>
-            <Card.Img variant='top' src={profilePic} />
-            <Card.Header>
-              <a
-                href='https://www.linkedin.com/in/aaron-billings-9b429610a/'
-                target='_blank'
-              >
-                <SVGImage src={LinkedIn} alt='LinkedIn' />
-              </a>
-              <a href='https://github.com/asbillings07' target='_blank'>
-                <SVGImage src={Github} alt='LinkedIn' />
-              </a>
-              <a href='https://twitter.com/abdevelops' target='_blank'>
-                <SVGImage src={Twitter} alt='LinkedIn' />
-              </a>
-              <a href='https://medium.com/@asbillings2007' target='_blank'>
-                <SVGImage src={Medium} alt='Medium' />
-              </a>
-              <a
-                href='mailto:abdevelops@gmail.com?subject=Thanks%20For%20Reaching%20Out&body=I%27m%20looking%20forward%20to%20connecting%20with%20you.%20You%20can%20replace%20this%20message%20with%20your%20own.%20'
-                target='_blank'
-              >
-                <EmailImage src={Email} alt='Email' />
-              </a>
-            </Card.Header>
-            <Card.Body>
-              You can click on any of the icons above to connect with me.
-            </Card.Body>
-          </StyledCard> */}
           <Card className={classes.card}>
             <CardMedia
               className={classes.media}
