@@ -10,6 +10,7 @@ import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/core/styles'
 import Container from '@material-ui/core/Container'
 import { data } from '../data'
+import styled from 'styled-components'
 
 const useStyles = makeStyles(theme => ({
   icon: {
@@ -48,7 +49,7 @@ export const Home = () => {
   const classes = useStyles()
 
   return (
-    <>
+    <StyledContainer>
       <CssBaseline />
       <main>
         {/* Intro Unit */}
@@ -121,6 +122,10 @@ export const Home = () => {
           </Grid>
         </Container>
       </main>
-    </>
+    </StyledContainer>
   )
 }
+
+const StyledContainer = styled.div`
+  margin-bottom: 100px;
+`
