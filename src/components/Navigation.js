@@ -11,6 +11,7 @@ import ListItemText from '@material-ui/core/ListItemText'
 import PhotoAlbumIcon from '@material-ui/icons/PhotoAlbum'
 import PersonIcon from '@material-ui/icons/Person'
 import ContactMailIcon from '@material-ui/icons/ContactMail'
+import Link from '@material-ui/core/Link'
 
 const StyledMenu = withStyles({
   paper: {
@@ -53,6 +54,9 @@ const useStyles = makeStyles(theme => ({
   },
   toolbar: {
     alignSelf: 'flex-end'
+  },
+  link: {
+    color: 'white'
   }
 }))
 
@@ -72,7 +76,9 @@ export const AppNavBar = () => {
       <AppBar position='static'>
         <Toolbar>
           <Typography variant='h6' className={classes.title}>
-            Aaron Billings
+            <Link className={classes.link} href='/'>
+              Aaron Billings
+            </Link>
           </Typography>
           <Button
             className={classes.menuButton}
