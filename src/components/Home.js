@@ -61,7 +61,7 @@ export const Home = () => {
               color='textPrimary'
               gutterBottom
             >
-              Portfolio
+              Aaron Billings
             </Typography>
             <Typography
               variant='h5'
