@@ -59,11 +59,11 @@ export const ProjectDetail = ({ match, history }) => {
       <br />
       <Row>
         <Col md={9}>
-          <Typography variant='h3' color='textPrimary'>
+          <Typography variant='h5' color='textPrimary'>
             {project.project_name}
           </Typography>
           <br />
-          <Typography variant='h4' color='textSecondary'>
+          <Typography variant='h6' color='textSecondary'>
             {project.description}
           </Typography>
         </Col>
@@ -88,7 +88,7 @@ export const ProjectDetail = ({ match, history }) => {
             variant='extended'
           >
             <ArrowBackIosIcon />
-            Prev
+
           </Fab>
           <Fab
             onClick={() => nextProject(match)}
@@ -98,7 +98,7 @@ export const ProjectDetail = ({ match, history }) => {
             variant='extended'
           >
             <ArrowForwardIosIcon className={classes.extendedIcon} />
-            Next
+
           </Fab>
           <ButtonGroup
             className={classes.viewProject}
@@ -121,7 +121,7 @@ export const ProjectDetail = ({ match, history }) => {
               href={project.live_link}
               target='_blank'
             >
-              Live View
+              View
             </Button>
           </ButtonGroup>
           <h3>Technologies</h3>

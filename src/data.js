@@ -121,26 +121,26 @@ export const data = {
       image_urls: [`${scoreboard1}`, `${scoreboard2}`, `${scoreboard3}`],
       isFlipped: false
     },
-    {
-      id: 4,
-      project_name: 'SQL Library Manager',
-      description:
-        'A library manager where you can create, view, update and delete books.',
-      technologies: [
-        'HTML',
-        'CSS',
-        'JavaScript',
-        'SQL',
-        'Node',
-        'Sequelize ORM',
-        'Pug',
-        'Express'
-      ],
-      live_link: 'https://sql-library-app.herokuapp.com/books',
-      github_link: 'https://github.com/asbillings07/sql_library_manager',
-      image_urls: [`${library1}`, `${library2}`, `${library3}`],
-      isFlipped: false
-    },
+    // {
+    //   id: 4,
+    //   project_name: 'SQL Library Manager',
+    //   description:
+    //     'A library manager where you can create, view, update and delete books.',
+    //   technologies: [
+    //     'HTML',
+    //     'CSS',
+    //     'JavaScript',
+    //     'SQL',
+    //     'Node',
+    //     'Sequelize ORM',
+    //     'Pug',
+    //     'Express'
+    //   ],
+    //   live_link: 'https://sql-library-app.herokuapp.com/books',
+    //   github_link: 'https://github.com/asbillings07/sql_library_manager',
+    //   image_urls: [`${library1}`, `${library2}`, `${library3}`],
+    //   isFlipped: false
+    // },
     {
       id: 5,
       project_name: 'React Gallery App',
