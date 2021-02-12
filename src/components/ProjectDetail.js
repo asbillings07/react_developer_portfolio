@@ -27,7 +27,8 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-export const ProjectDetail = ({ match }) => {
+export const ProjectDetail = ({ match, history }) => {
+
   const { id } = match.params
   const project = data.projects[id]
 
@@ -36,17 +37,18 @@ export const ProjectDetail = ({ match }) => {
     const { id } = match.params
     const { projects } = data
     if (id >= 0 && id < projects.length - 1) {
-      window.location.href = `/project/${+id + 1}`
+      history.push(`/project/${+id + 1}`)
     } else {
       nextButton.disabled = true
     }
   }
+
   const prevProject = match => {
     const prevButton = document.getElementById('prev')
     const { id } = match.params
     const { projects } = data
     if (id <= projects.length - 1 && id > 0) {
-      window.location.href = `/project/${+id - 1}`
+      history.push(`/project/${+id - 1}`)
     } else {
       prevButton.disabled = true
     }
