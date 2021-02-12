@@ -27,7 +27,8 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-export const ProjectDetail = ({ match }) => {
+export const ProjectDetail = ({ match, history }) => {
+
   const { id } = match.params
   const project = data.projects[id]
 
@@ -36,17 +37,18 @@ export const ProjectDetail = ({ match }) => {
     const { id } = match.params
     const { projects } = data
     if (id >= 0 && id < projects.length - 1) {
-      window.location.href = `/project/${+id + 1}`
+      history.push(`/project/${+id + 1}`)
     } else {
       nextButton.disabled = true
     }
   }
+
   const prevProject = match => {
     const prevButton = document.getElementById('prev')
     const { id } = match.params
     const { projects } = data
     if (id <= projects.length - 1 && id > 0) {
-      window.location.href = `/project/${+id - 1}`
+      history.push(`/project/${+id - 1}`)
     } else {
       prevButton.disabled = true
     }
@@ -57,11 +59,11 @@ export const ProjectDetail = ({ match }) => {
       <br />
       <Row>
         <Col md={9}>
-          <Typography variant='h3' color='textPrimary'>
+          <Typography variant='h5' color='textPrimary'>
             {project.project_name}
           </Typography>
           <br />
-          <Typography variant='h4' color='textSecondary'>
+          <Typography variant='h6' color='textSecondary'>
             {project.description}
           </Typography>
         </Col>
@@ -86,7 +88,7 @@ export const ProjectDetail = ({ match }) => {
             variant='extended'
           >
             <ArrowBackIosIcon />
-            Prev
+
           </Fab>
           <Fab
             onClick={() => nextProject(match)}
@@ -96,7 +98,7 @@ export const ProjectDetail = ({ match }) => {
             variant='extended'
           >
             <ArrowForwardIosIcon className={classes.extendedIcon} />
-            Next
+
           </Fab>
           <ButtonGroup
             className={classes.viewProject}
@@ -119,7 +121,7 @@ export const ProjectDetail = ({ match }) => {
               href={project.live_link}
               target='_blank'
             >
-              Live View
+              View
             </Button>
           </ButtonGroup>
           <h3>Technologies</h3>
