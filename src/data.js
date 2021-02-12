@@ -28,11 +28,34 @@ import recommendit1 from './images/recommendit01.jpg'
 import recommendit2 from './images/recommendit02.jpg'
 import recommendit3 from './images/recommendit03.jpg'
 import recommendit4 from './images/recommendit04.jpg'
+import getter1 from './images/getter-lg-tile.png'
+import getter2 from './images/2020-12-07_15-52.png'
+import getter3 from './images/2020-12-08_07-11.jpg'
 
 export const data = {
   projects: [
     {
       id: 0,
+      project_name: 'Getter',
+      description:
+        'A Chrome Extension that Automatically finds fonts, colors and more on any webpage.',
+      technologies: [
+        'HTML',
+        'CSS',
+        'JavaScript',
+        'Google Chrome APIs'
+      ],
+      live_link: 'https://chrome.google.com/webstore/detail/getter/nkgabfmcijbajgobbeloaobhbhpacnim',
+      github_link: 'https://github.com/asbillings07/Getter',
+      image_urls: [
+        `${getter1}`,
+        `${getter2}`,
+        `${getter3}`,
+      ],
+      isFlipped: false
+    },
+    {
+      id: 1,
       project_name: 'Recommendit!',
       description:
         'An App that allows you to find and share cool places to your friends',
@@ -62,7 +85,7 @@ export const data = {
       isFlipped: false
     },
     {
-      id: 1,
+      id: 2,
       project_name: 'CourseShare',
       description:
         'A Full Stack App that allows users to view, create, update and delete courses.',
@@ -88,7 +111,7 @@ export const data = {
       isFlipped: false
     },
     {
-      id: 2,
+      id: 3,
       project_name: 'React Scoreboard',
       description:
         'A scoreboard for tracking points in a game of your choice, it also includes a timer',
@@ -99,7 +122,7 @@ export const data = {
       isFlipped: false
     },
     {
-      id: 3,
+      id: 4,
       project_name: 'SQL Library Manager',
       description:
         'A library manager where you can create, view, update and delete books.',
@@ -119,7 +142,7 @@ export const data = {
       isFlipped: false
     },
     {
-      id: 4,
+      id: 5,
       project_name: 'React Gallery App',
       description: 'A flickr type clone app with the flickr API.',
       technologies: [
@@ -136,7 +159,7 @@ export const data = {
       isFlipped: false
     },
     {
-      id: 5,
+      id: 6,
       project_name: 'Employee Directory',
       description:
         'An employee directory app created by communicating with a third-party API.',
@@ -154,7 +177,7 @@ export const data = {
       isFlipped: false
     },
     {
-      id: 6,
+      id: 7,
       project_name: 'Phrase Game',
       description: "A browser-based, word guessing game: 'Jedi Hunter.'",
       technologies: ['HTML', 'CSS', 'JavaScript', 'JQuery', 'OOP'],
@@ -164,7 +187,7 @@ export const data = {
       isFlipped: false
     },
     {
-      id: 7,
+      id: 8,
       project_name: 'Interactive Form',
       description:
         'A form enhanced with JavaScript so that it’s engaging, interactive, and easy to use',
@@ -175,7 +198,7 @@ export const data = {
       isFlipped: false
     },
     {
-      id: 8,
+      id: 9,
       project_name: 'Pagination App',
       description:
         'An app that displays 10 students on one page and provides navigation to jump to a list of more items.',
@@ -187,7 +210,7 @@ export const data = {
       isFlipped: false
     },
     {
-      id: 9,
+      id: 10,
       project_name: 'Random Quote Generator',
       description:
         'A program that displays a randomly selected quote each time the user clicks a button',

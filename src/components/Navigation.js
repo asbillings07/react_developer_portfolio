@@ -22,15 +22,7 @@ const useStyles = makeStyles(theme => ({
 
 export const AppNavBar = () => {
   const classes = useStyles()
-  const [anchorEl, setAnchorEl] = React.useState(null)
 
-  const handleClick = e => {
-    setAnchorEl(e.currentTarget)
-  }
-
-  const handleClose = () => {
-    setAnchorEl(null)
-  }
   return (
     <div className={classes.root}>
       <AppBar position='static'>
@@ -38,7 +30,7 @@ export const AppNavBar = () => {
           <Typography variant='h6' className={classes.title}>
             Aaron Billings
           </Typography>
-          <MenuItems handleClick={handleClick} handleClose={handleClose} anchorEl={anchorEl} classes={classes} />
+          <MenuItems classes={classes} />
         </Toolbar>
       </AppBar>
     </div>

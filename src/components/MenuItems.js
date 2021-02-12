@@ -1,20 +1,8 @@
 import React from 'react'
-import { ListItemIcon, ListItemText, Button, MenuItem, Menu } from '@material-ui/core'
+import { MenuDropDown, HorizontalMenu } from "./Menu";
+import { useWindowWidth } from "../hooks/useWindowWidth";
+import { MenuItem, Menu } from '@material-ui/core'
 import { withStyles } from '@material-ui/core/styles'
-import { PhotoAlbum, Person, ContactMail } from '@material-ui/icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
-
-const StyledMenuItem = withStyles(theme => ({
-    root: {
-        '&:focus': {
-            backgroundColor: theme.palette.primary.main,
-            '& .MuiListItemIcon-root, & .MuiListItemText-primary': {
-                color: theme.palette.common.white
-            }
-        }
-    }
-}))(MenuItem)
 
 const StyledMenu = withStyles({
     paper: {
@@ -36,51 +24,24 @@ const StyledMenu = withStyles({
     />
 ))
 
-export const MenuItems = ({ handleClick, handleClose, classes, anchorEl }) => {
+const StyledMenuItem = withStyles(theme => ({
+    root: {
+        '&:focus': {
+            backgroundColor: theme.palette.primary.main,
+            '& .MuiListItemIcon-root, & .MuiListItemText-primary': {
+                color: theme.palette.common.white
+            }
+        }
+    }
+}))(MenuItem)
+
+export const MenuItems = ({ classes }) => {
+    const width = useWindowWidth();
+
     return (
         <div>
-            <Button
-                className={classes.menuButton}
-                aria-controls='customized-menu'
-                aria-haspopup='true'
-                variant='contained'
-                color='primary'
-                onClick={handleClick}
-            >
-                <FontAwesomeIcon icon={faBars} size='2x' />
-            </Button>
-            <StyledMenu
-                id='customized-menu'
-                anchorEl={anchorEl}
-                keepMounted
-                open={Boolean(anchorEl)}
-                onClose={handleClose}
-            >
-                <StyledMenuItem>
-                    <ListItemIcon>
-                        <PhotoAlbum fontSize='small' />
-                    </ListItemIcon>
-                    <a href='/'>
-                        <ListItemText primary='Projects' />
-                    </a>
-                </StyledMenuItem>
-                <StyledMenuItem>
-                    <ListItemIcon>
-                        <Person fontSize='small' />
-                    </ListItemIcon>
-                    <a href='/about'>
-                        <ListItemText primary='About Me' />
-                    </a>
-                </StyledMenuItem>
-                <StyledMenuItem>
-                    <ListItemIcon>
-                        <ContactMail fontSize='small' />
-                    </ListItemIcon>
-                    <a href='/contact'>
-                        <ListItemText primary='Contact Me' />
-                    </a>
-                </StyledMenuItem>
-            </StyledMenu>
+            { width <= 960 ? (<MenuDropDown classes={classes} StyledMenu={StyledMenu} StyledMenuItem={StyledMenuItem} />) : (<HorizontalMenu StyledMenuItem={StyledMenuItem} />)}
         </div>
     )
 }
+
