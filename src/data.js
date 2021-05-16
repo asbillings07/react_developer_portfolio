@@ -142,7 +142,7 @@ export const data = {
     //   isFlipped: false
     // },
     {
-      id: 5,
+      id: 4,
       project_name: 'React Gallery App',
       description: 'A flickr type clone app with the flickr API.',
       technologies: [
@@ -159,7 +159,7 @@ export const data = {
       isFlipped: false
     },
     {
-      id: 6,
+      id: 5,
       project_name: 'Employee Directory',
       description:
         'An employee directory app created by communicating with a third-party API.',
@@ -177,7 +177,7 @@ export const data = {
       isFlipped: false
     },
     {
-      id: 7,
+      id: 6,
       project_name: 'Phrase Game',
       description: "A browser-based, word guessing game: 'Jedi Hunter.'",
       technologies: ['HTML', 'CSS', 'JavaScript', 'JQuery', 'OOP'],
@@ -187,7 +187,7 @@ export const data = {
       isFlipped: false
     },
     {
-      id: 8,
+      id: 7,
       project_name: 'Interactive Form',
       description:
         'A form enhanced with JavaScript so that it’s engaging, interactive, and easy to use',
@@ -198,7 +198,7 @@ export const data = {
       isFlipped: false
     },
     {
-      id: 9,
+      id: 8,
       project_name: 'Pagination App',
       description:
         'An app that displays 10 students on one page and provides navigation to jump to a list of more items.',
@@ -210,7 +210,7 @@ export const data = {
       isFlipped: false
     },
     {
-      id: 10,
+      id: 9,
       project_name: 'Random Quote Generator',
       description:
         'A program that displays a randomly selected quote each time the user clicks a button',
