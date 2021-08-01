@@ -51,13 +51,13 @@ export const About = () => {
               <Typography variant='body2' color='textSecondary' component='p'>
                 Click any of the icons below to connect with or learn more about
                 me. You can also checkout the articles I've written{' '}
-                <a
+                <Link
                   href='https://abdevelops.medium.com'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
                   here
-                </a>
+                </Link>
                 .
               </Typography>
             </CardContent>
@@ -150,13 +150,14 @@ export const About = () => {
           <br />
           <Typography variant='h6' color='textSecondary'>
             Also, checkout some of the articles I've written{' '}
-            <a
+
+            <Link
               href='https://abdevelops.medium.com'
               target='_blank'
               rel='noopener noreferrer'
             >
               here
-            </a>
+            </Link>
             .
           </Typography>
         </Col>
@@ -167,5 +168,5 @@ export const About = () => {
 
 const StyledContainer = styled(Container)`
   margin-top: 25px;
-  margin-bottom: 100px;
+  margin-bottom: 250px;
 `

@@ -20,7 +20,8 @@ const useStyles = makeStyles(theme => ({
   },
   nextbutton: {
     marginBottom: 30,
-    marginRight: 20
+    marginRight: 20,
+    disabled: true
   },
   viewProject: {
     marginBottom: 50
@@ -45,12 +46,13 @@ export const ProjectDetail = ({ match, history }) => {
 
   const prevProject = match => {
     const prevButton = document.getElementById('prev')
+    console.log(prevButton)
     const { id } = match.params
     const { projects } = data
     if (id <= projects.length - 1 && id > 0) {
       history.push(`/project/${+id - 1}`)
     } else {
-      prevButton.disabled = true
+      prevButton.addClass('mui-disabled')
     }
   }
   const classes = useStyles()
@@ -81,7 +83,6 @@ export const ProjectDetail = ({ match, history }) => {
         <ButtonCol md={3}>
           <Fab
             onClick={() => prevProject(match)}
-            {...(match.params.id === 0 ? 'disabled' : '')}
             className={classes.nextbutton}
             id='prev'
             aria-label='previous'
