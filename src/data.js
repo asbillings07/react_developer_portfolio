@@ -12,9 +12,9 @@ import gallery2 from './images/gallery02.jpg'
 import gallery3 from './images/gallery03.jpg'
 import interactive1 from './images/interactive-form01.jpg'
 import interactive2 from './images/interactive-form02.jpg'
-import library1 from './images/library01.jpg'
-import library2 from './images/library02.jpg'
-import library3 from './images/library03.jpg'
+// import library1 from './images/library01.jpg'
+// import library2 from './images/library02.jpg'
+// import library3 from './images/library03.jpg'
 import pagination1 from './images/pagination01.jpg'
 import pagination2 from './images/pagination02.jpg'
 import pagination3 from './images/pagination03.jpg'
@@ -28,11 +28,34 @@ import recommendit1 from './images/recommendit01.jpg'
 import recommendit2 from './images/recommendit02.jpg'
 import recommendit3 from './images/recommendit03.jpg'
 import recommendit4 from './images/recommendit04.jpg'
+import getter1 from './images/getter-lg-tile.png'
+import getter2 from './images/2020-12-07_15-52.png'
+import getter3 from './images/2020-12-08_07-11.jpg'
 
 export const data = {
   projects: [
     {
       id: 0,
+      project_name: 'Getter',
+      description:
+        'A Chrome Extension that Automatically finds fonts, colors and more on any webpage.',
+      technologies: [
+        'HTML',
+        'CSS',
+        'JavaScript',
+        'Google Chrome APIs'
+      ],
+      live_link: 'https://chrome.google.com/webstore/detail/getter/nkgabfmcijbajgobbeloaobhbhpacnim',
+      github_link: 'https://github.com/asbillings07/Getter',
+      image_urls: [
+        `${getter1}`,
+        `${getter2}`,
+        `${getter3}`,
+      ],
+      isFlipped: false
+    },
+    {
+      id: 1,
       project_name: 'Recommendit!',
       description:
         'An App that allows you to find and share cool places to your friends',
@@ -62,7 +85,7 @@ export const data = {
       isFlipped: false
     },
     {
-      id: 1,
+      id: 2,
       project_name: 'CourseShare',
       description:
         'A Full Stack App that allows users to view, create, update and delete courses.',
@@ -88,7 +111,7 @@ export const data = {
       isFlipped: false
     },
     {
-      id: 2,
+      id: 3,
       project_name: 'React Scoreboard',
       description:
         'A scoreboard for tracking points in a game of your choice, it also includes a timer',
@@ -98,26 +121,26 @@ export const data = {
       image_urls: [`${scoreboard1}`, `${scoreboard2}`, `${scoreboard3}`],
       isFlipped: false
     },
-    {
-      id: 3,
-      project_name: 'SQL Library Manager',
-      description:
-        'A library manager where you can create, view, update and delete books.',
-      technologies: [
-        'HTML',
-        'CSS',
-        'JavaScript',
-        'SQL',
-        'Node',
-        'Sequelize ORM',
-        'Pug',
-        'Express'
-      ],
-      live_link: 'https://sql-library-app.herokuapp.com/books',
-      github_link: 'https://github.com/asbillings07/sql_library_manager',
-      image_urls: [`${library1}`, `${library2}`, `${library3}`],
-      isFlipped: false
-    },
+    // {
+    //   id: 4,
+    //   project_name: 'SQL Library Manager',
+    //   description:
+    //     'A library manager where you can create, view, update and delete books.',
+    //   technologies: [
+    //     'HTML',
+    //     'CSS',
+    //     'JavaScript',
+    //     'SQL',
+    //     'Node',
+    //     'Sequelize ORM',
+    //     'Pug',
+    //     'Express'
+    //   ],
+    //   live_link: 'https://sql-library-app.herokuapp.com/books',
+    //   github_link: 'https://github.com/asbillings07/sql_library_manager',
+    //   image_urls: [`${library1}`, `${library2}`, `${library3}`],
+    //   isFlipped: false
+    // },
     {
       id: 4,
       project_name: 'React Gallery App',

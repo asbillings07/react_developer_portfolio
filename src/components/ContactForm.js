@@ -32,7 +32,7 @@ export const ContactForm = () => {
   return (
     <>
       <HeadingContainer>
-        <Typography variant='h1' color='textSecondary'>
+        <Typography variant='h3' color='textSecondary'>
           Contact Form
         </Typography>
       </HeadingContainer>
