@@ -64,7 +64,7 @@ export const About = () => {
             <CardActions disableSpacing>
               <IconButton aria-label='add to favorites'>
                 <Link
-                  href='https://github.com/asbillings07'
+                  href='https://abdevelops.medium.com'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
@@ -151,7 +151,7 @@ export const About = () => {
           <Typography variant='h6' color='textSecondary'>
             Also, checkout some of the articles I've written{' '}
             <a
-              href='https://medium.com/@asbillings2007'
+              href='https://abdevelops.medium.com'
               target='_blank'
               rel='noopener noreferrer'
             >
