@@ -60,7 +60,7 @@ export const Footer = () => {
           <SVGImage src={Twitter} alt='LinkedIn' />
         </a>
         <a
-          href='https://medium.com/@asbillings2007'
+          href='https://abdevelops.medium.com'
           target='_blank'
           rel='noopener noreferrer'
         >
