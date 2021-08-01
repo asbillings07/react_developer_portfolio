@@ -52,7 +52,7 @@ export const About = () => {
                 Click any of the icons below to connect with or learn more about
                 me. You can also checkout the articles I've written{' '}
                 <a
-                  href='https://medium.com/@asbillings2007'
+                  href='https://abdevelops.medium.com'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
@@ -64,7 +64,7 @@ export const About = () => {
             <CardActions disableSpacing>
               <IconButton aria-label='add to favorites'>
                 <Link
-                  href='https://abdevelops.medium.com'
+                  href='https://github.com/asbillings07'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
