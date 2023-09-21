@@ -1,4 +1,5 @@
 import React from 'react'
+import { useAppContext } from '../store'
 import Button from '@material-ui/core/Button'
 import Card from '@material-ui/core/Card'
 import CardActions from '@material-ui/core/CardActions'
@@ -9,7 +10,9 @@ import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/core/styles'
 import Container from '@material-ui/core/Container'
-import { data } from '../data'
+import {Cloudinary, CloudinaryImage} from "@cloudinary/url-gen";
+import { fill } from "@cloudinary/url-gen/actions/resize";
+import {AdvancedImage} from "@cloudinary/react";
 import styled from 'styled-components'
 
 const useStyles = makeStyles(theme => ({
@@ -33,7 +36,7 @@ const useStyles = makeStyles(theme => ({
     flexDirection: 'column'
   },
   cardMedia: {
-    paddingTop: '56.25%' // 16:9
+    paddingTop: '1.25%' // 16:9
   },
   cardContent: {
     flexGrow: 1
@@ -44,10 +47,10 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-export const Home = () => {
-  const cards = data.projects
-  const classes = useStyles()
 
+export const Home = () => {
+  const { projects } = useAppContext();
+  const classes = useStyles()
   return (
     <StyledContainer>
       <CssBaseline />
@@ -93,14 +96,11 @@ export const Home = () => {
         <Container className={classes.cardGrid} maxWidth='md'>
           {/* End Intro Unit */}
           <Grid container spacing={4}>
-            {cards.map(project => (
-              <Grid item key={project.id} xs={12} sm={6} md={4}>
+            {projects.map(project => {
+              return (
+                <Grid item key={project.id} xs={12} sm={6} md={4}>
                 <Card className={classes.card}>
-                  <CardMedia
-                    className={classes.cardMedia}
-                    image={project.image_urls[0]}
-                    title='Image title'
-                  />
+                  <AdvancedImage cldImg={new CloudinaryImage(`personal_website/${project.image_names[0]}`, {cloudName: 'dsilz60qd'}).resize(fill().width(300).height(200))} />
                   <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant='h5' component='h2'>
                       {project.project_name}
@@ -118,7 +118,8 @@ export const Home = () => {
                   </CardActions>
                 </Card>
               </Grid>
-            ))}
+              )
+            })}
           </Grid>
         </Container>
       </main>

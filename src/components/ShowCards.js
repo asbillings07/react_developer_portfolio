@@ -2,6 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import { Card, Button, Col } from 'react-bootstrap'
 import { PropTypes } from 'prop-types'
+import { CloudinaryImage} from "@cloudinary/url-gen";
+import { fill } from "@cloudinary/url-gen/actions/resize";
+import {AdvancedImage} from "@cloudinary/react";
 
 export function ShowCards ({ projects }) {
   return projects.map(project => (
@@ -9,7 +12,7 @@ export function ShowCards ({ projects }) {
       <div className='flip-card'>
         <div className='flip-card-inner'>
           <FrontCard className=' flip-card-front'>
-            <Card.Img variant='top' src={project.image_urls[0]} />
+            <AdvancedImage cldImg={new CloudinaryImage(`personal_website/${project.image_names[0]}`, {cloudName: 'dsilz60qd'}).resize(fill().width(300).height(200))} />
           </FrontCard>
           <BackCard className=' flip-card-back'>
             <Card.Body>
