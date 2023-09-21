@@ -1,6 +1,5 @@
 import React from 'react'
 import { Container, Col, Row } from 'react-bootstrap'
-import { data } from '../data'
 import styled from 'styled-components'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/core/styles'
@@ -9,6 +8,10 @@ import ButtonGroup from '@material-ui/core/ButtonGroup'
 import Fab from '@material-ui/core/Fab'
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos'
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos'
+import { CloudinaryImage} from "@cloudinary/url-gen";
+import { fill } from "@cloudinary/url-gen/actions/resize";
+import {AdvancedImage} from "@cloudinary/react";
+import { useAppContext } from '../store'
 
 const useStyles = makeStyles(theme => ({
   Title: {
@@ -31,12 +34,13 @@ const useStyles = makeStyles(theme => ({
 export const ProjectDetail = ({ match, history }) => {
 
   const { id } = match.params
-  const project = data.projects[id]
+  const { projects } = useAppContext()
+
+  const project = projects[id]
 
   const nextProject = match => {
     const nextButton = document.getElementById('next')
     const { id } = match.params
-    const { projects } = data
     if (id >= 0 && id < projects.length - 1) {
       history.push(`/project/${+id + 1}`)
     } else {
@@ -48,7 +52,6 @@ export const ProjectDetail = ({ match, history }) => {
     const prevButton = document.getElementById('prev')
     console.log(prevButton)
     const { id } = match.params
-    const { projects } = data
     if (id <= projects.length - 1 && id > 0) {
       history.push(`/project/${+id - 1}`)
     } else {
@@ -72,13 +75,12 @@ export const ProjectDetail = ({ match, history }) => {
       </Row>
       <Row>
         <ProjectCol md={8}>
-          {project.image_urls.map((imageSrc, i) => (
-            <ProjectImage
-              src={imageSrc}
-              alt={`${project.project_name}`}
-              key={i}
-            />
-          ))}
+          {/* ToDo add skalenton loader */}
+          {React.Children.toArray(project.image_names.map((imageName, i) => (
+            <ProjectImage>
+              <AdvancedImage cldImg={new CloudinaryImage(`personal_website/${imageName}`, {cloudName: 'dsilz60qd'}).resize(fill().width(450).height(250))} />
+            </ProjectImage>
+          )))}
         </ProjectCol>
         <ButtonCol md={3}>
           <Fab
@@ -135,12 +137,11 @@ export const ProjectDetail = ({ match, history }) => {
   )
 }
 
-const ProjectImage = styled.img`
+const ProjectImage = styled.div`
   width: 100%;
   height: auto;
   margin-top: 20px;
   margin-bottom: 20px;
-  box-shadow: 2px 2px 2px 2px;
 `
 const ProjectCol = styled(Col)`
   margin-right: 20px;
