@@ -142,7 +142,6 @@ const ProjectImage = styled.div`
   height: auto;
   margin-top: 20px;
   margin-bottom: 20px;
-  box-shadow: 2px 2px 2px 2px;
 `
 const ProjectCol = styled(Col)`
   margin-right: 20px;
